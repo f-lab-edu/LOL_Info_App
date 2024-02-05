@@ -1,0 +1,9 @@
+# Mac OS
+.DS_Store
+
+# Cocoapods
+Pods/
+Podfile.lock
+
+# Xcode
+UserInterfaceState.xcuserstate
