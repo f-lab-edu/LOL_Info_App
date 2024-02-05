@@ -12,6 +12,14 @@
 		FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */; };
 		FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F52B710ED600CF2666 /* Assets.xcassets */; };
 		FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */; };
+		FE26A40D2B711CD900CF2666 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A40C2B711CD900CF2666 /* NetworkManager.swift */; };
+		FE26A4112B711CF600CF2666 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4102B711CF600CF2666 /* CoreDataManager.swift */; };
+		FE26A4132B711D2100CF2666 /* ChampionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4122B711D2100CF2666 /* ChampionDetailViewController.swift */; };
+		FE26A4182B711D8200CF2666 /* ChampionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4172B711D8200CF2666 /* ChampionViewModel.swift */; };
+		FE26A41A2B711D8E00CF2666 /* ChampionDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4192B711D8E00CF2666 /* ChampionDetailViewModel.swift */; };
+		FE26A41F2B711E3300CF2666 /* String+Ex.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A41E2B711E3300CF2666 /* String+Ex.swift */; };
+		FE26A4232B711E7C00CF2666 /* ChampionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4222B711E7C00CF2666 /* ChampionModel.swift */; };
+		FE26A4252B711E8B00CF2666 /* ChampionDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A4242B711E8B00CF2666 /* ChampionDetailModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,14 @@
 		FE26A3F52B710ED600CF2666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE26A3F82B710ED600CF2666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE26A3FA2B710ED600CF2666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE26A40C2B711CD900CF2666 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		FE26A4102B711CF600CF2666 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		FE26A4122B711D2100CF2666 /* ChampionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailViewController.swift; sourceTree = "<group>"; };
+		FE26A4172B711D8200CF2666 /* ChampionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionViewModel.swift; sourceTree = "<group>"; };
+		FE26A4192B711D8E00CF2666 /* ChampionDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailViewModel.swift; sourceTree = "<group>"; };
+		FE26A41E2B711E3300CF2666 /* String+Ex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ex.swift"; sourceTree = "<group>"; };
+		FE26A4222B711E7C00CF2666 /* ChampionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionModel.swift; sourceTree = "<group>"; };
+		FE26A4242B711E8B00CF2666 /* ChampionDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionDetailModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A4092B711C0500CF2666 /* Main */,
+				FE26A40A2B711C0D00CF2666 /* Detail */,
 			);
 			path = Champion;
 			sourceTree = "<group>";
@@ -110,20 +127,59 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
+				FE26A4222B711E7C00CF2666 /* ChampionModel.swift */,
+				FE26A4172B711D8200CF2666 /* ChampionViewModel.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		FE26A40A2B711C0D00CF2666 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A4122B711D2100CF2666 /* ChampionDetailViewController.swift */,
+				FE26A4242B711E8B00CF2666 /* ChampionDetailModel.swift */,
+				FE26A4192B711D8E00CF2666 /* ChampionDetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		FE26A40B2B711CA600CF2666 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				FE26A40F2B711CE900CF2666 /* CoreData */,
+				FE26A40E2B711CDF00CF2666 /* Network */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE26A40E2B711CDF00CF2666 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A40C2B711CD900CF2666 /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FE26A40F2B711CE900CF2666 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A4102B711CF600CF2666 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		FE26A41D2B711E0200CF2666 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A41E2B711E3300CF2666 /* String+Ex.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		FE26A4282B711F1400CF2666 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				FE26A41D2B711E0200CF2666 /* Extensions */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -198,8 +254,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE26A40D2B711CD900CF2666 /* NetworkManager.swift in Sources */,
+				FE26A4232B711E7C00CF2666 /* ChampionModel.swift in Sources */,
+				FE26A4182B711D8200CF2666 /* ChampionViewModel.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
+				FE26A41F2B711E3300CF2666 /* String+Ex.swift in Sources */,
+				FE26A4132B711D2100CF2666 /* ChampionDetailViewController.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
+				FE26A4252B711E8B00CF2666 /* ChampionDetailModel.swift in Sources */,
+				FE26A4112B711CF600CF2666 /* CoreDataManager.swift in Sources */,
+				FE26A41A2B711D8E00CF2666 /* ChampionDetailViewModel.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
