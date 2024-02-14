@@ -9,9 +9,5 @@ import UIKit
 
 class ChampionViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }
 
