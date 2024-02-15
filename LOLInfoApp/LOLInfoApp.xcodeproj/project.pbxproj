@@ -11,6 +11,7 @@
 		F272E2532B7E0CAE00F05B31 /* ChampionMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */; };
 		F2BE134E2B7DD0470029E980 /* NetworkURLStringCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE134D2B7DD0470029E980 /* NetworkURLStringCollection.swift */; };
 		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
+		F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13542B7DDD9D0029E980 /* Requestable.swift */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
 		FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */; };
 		FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */; };
@@ -24,6 +25,7 @@
 		F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainModel.swift; sourceTree = "<group>"; };
 		F2BE134D2B7DD0470029E980 /* NetworkURLStringCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLStringCollection.swift; sourceTree = "<group>"; };
 		F2BE13522B7DD3E10029E980 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
+		F2BE13542B7DDD9D0029E980 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -71,10 +73,11 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		F2BE134C2B7DCFE90029E980 /* Network */ = {
+		F272E2572B7E0E5900F05B31 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				F2BE134D2B7DD0470029E980 /* NetworkURLStringCollection.swift */,
+				F2BE13542B7DDD9D0029E980 /* Requestable.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -172,7 +175,6 @@
 		FE26A40B2B711CA600CF2666 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				F2BE134C2B7DCFE90029E980 /* Network */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -180,6 +182,7 @@
 		FE26A4282B711F1400CF2666 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				F272E2572B7E0E5900F05B31 /* Network */,
 				F2BE13512B7DD3D50029E980 /* Extension */,
 			);
 			path = Commons;
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
 				F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainModel.swift in Sources */,
