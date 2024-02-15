@@ -4,3 +4,6 @@
 # Cocoapods
 Pods/
 Podfile.lock
+
+# Xcode
+UserInterfaceState.xcuserstate
