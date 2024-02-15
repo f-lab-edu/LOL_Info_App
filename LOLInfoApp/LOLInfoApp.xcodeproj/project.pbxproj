@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
 		FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */; };
 		FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
+		F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -29,17 +33,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		25DB05B03DB30208A2FA501B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF13FB68FBA4340A81FF0CA8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */,
+				AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FE26A3E02B710ED500CF2666 = {
 			isa = PBXGroup;
 			children = (
 				FE26A3EB2B710ED500CF2666 /* LOLInfoApp */,
 				FE26A3EA2B710ED500CF2666 /* Products */,
+				EF13FB68FBA4340A81FF0CA8 /* Pods */,
+				25DB05B03DB30208A2FA501B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,9 +160,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE26A3FD2B710ED600CF2666 /* Build configuration list for PBXNativeTarget "LOLInfoApp" */;
 			buildPhases = (
+				B15D8544381B8BDEF74C11DC /* [CP] Check Pods Manifest.lock */,
 				FE26A3E52B710ED500CF2666 /* Sources */,
 				FE26A3E62B710ED500CF2666 /* Frameworks */,
 				FE26A3E72B710ED500CF2666 /* Resources */,
+				218560BCE0F0172B41E96B59 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -192,6 +219,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		218560BCE0F0172B41E96B59 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B15D8544381B8BDEF74C11DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LOLInfoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE26A3E52B710ED500CF2666 /* Sources */ = {
@@ -334,6 +403,7 @@
 		};
 		FE26A3FE2B710ED600CF2666 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +431,7 @@
 		};
 		FE26A3FF2B710ED600CF2666 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
