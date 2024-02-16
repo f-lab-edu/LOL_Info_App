@@ -1,5 +1,5 @@
 //
-//  ChampionAPIRequest.swift
+//  ChampionAPIEndpoint.swift
 //  LOLInfoApp
 //
 //  Created by Jeong Deokho on 2024/02/15.
@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-enum ChampionAPIRequest: Requestable {
+enum ChampionAPIEndpoint: Requestable {
     // MARK: - Case
     
     case main
