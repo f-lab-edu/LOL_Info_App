@@ -9,6 +9,7 @@ import Foundation
 import Alamofire
 
 enum ChampionAPIEndpoint: Requestable {
+    
     // MARK: - Case
     
     case main
