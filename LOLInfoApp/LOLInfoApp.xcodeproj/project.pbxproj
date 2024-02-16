@@ -67,14 +67,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		F272E2512B7E0CA300F05B31 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		F272E2572B7E0E5900F05B31 /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -178,7 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
-				F272E2512B7E0CA300F05B31 /* Model */,
+				F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
