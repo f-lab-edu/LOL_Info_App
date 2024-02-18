@@ -1,6 +1,39 @@
 # LOL Info App
 리그오브 레전드 챔피언 정보 제공앱
 
+# 사용 아키텍쳐 (MVVM With Clean Architecture)
+
+![스크린샷 2024-02-18 오후 7 56 02](https://github.com/f-lab-edu/LOL_Info_App/assets/93653997/b1a09dbd-d432-4785-88d8-6da7a2f82035)
+
+## Presentation Layer
+- Coordinator
+   
+화면의 이동을 담당
+- View(ViewController)
+    
+UI를 담당 (레이아웃, 사용자이벤트)
+- ViewModel
+    
+View의 상태 관리를 담당 (View의 이벤트 발생에대해서 무엇을하고 View를 어떻게 업데이트 할지)
+   
+## Domain Layer
+- UseCase
+    
+비즈니스 로직을 담당
+- Entity
+     
+화면의 보여질 형태의 데이터를 담당
+
+## Data Layer
+- Repository
+      
+서버나 DB로 데이터 요청을 담당
+- DTO (Data Transfer Object)
+      
+서버나 DB로 부터 받아온 데이터의 처리를 담당 (데이터를 처리할 필요 없이 바로 사용 가능한 데이터인경우 생략 가능)
+
+# 구현 화면 정리
+
 ## 챔피언 메인 화면
 <img width="250" alt="스크린샷 2024-02-06 오후 9 54 04" src="https://github.com/f-lab-edu/LOL_Info_App/assets/93653997/9822b8bb-2884-4d35-b5e5-e06010aa32de">
 
