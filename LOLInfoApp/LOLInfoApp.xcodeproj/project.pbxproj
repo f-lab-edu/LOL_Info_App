@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
 		FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */; };
-		FE26A3F12B710ED500CF2666 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ViewController.swift */; };
-		FE26A3F42B710ED500CF2666 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F22B710ED500CF2666 /* Main.storyboard */; };
+		FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */; };
 		FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F52B710ED600CF2666 /* Assets.xcassets */; };
 		FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FE26A3F02B710ED500CF2666 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FE26A3F32B710ED500CF2666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionViewController.swift; sourceTree = "<group>"; };
 		FE26A3F52B710ED600CF2666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE26A3F82B710ED600CF2666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE26A3FA2B710ED600CF2666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -56,15 +54,78 @@
 		FE26A3EB2B710ED500CF2666 /* LOLInfoApp */ = {
 			isa = PBXGroup;
 			children = (
-				FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */,
-				FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */,
-				FE26A3F02B710ED500CF2666 /* ViewController.swift */,
-				FE26A3F22B710ED500CF2666 /* Main.storyboard */,
-				FE26A3F52B710ED600CF2666 /* Assets.xcassets */,
-				FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */,
-				FE26A3FA2B710ED600CF2666 /* Info.plist */,
+				FE26A4042B711B3F00CF2666 /* Application */,
+				FE26A4072B711B6500CF2666 /* SupportingFiles */,
+				FE26A4062B711B5900CF2666 /* Resources */,
+				FE26A4282B711F1400CF2666 /* Commons */,
+				FE26A40B2B711CA600CF2666 /* Manager */,
+				FE26A4052B711B4A00CF2666 /* Scenes */,
 			);
 			path = LOLInfoApp;
+			sourceTree = "<group>";
+		};
+		FE26A4042B711B3F00CF2666 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */,
+				FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		FE26A4052B711B4A00CF2666 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A4082B711BD800CF2666 /* Champion */,
+				FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		FE26A4062B711B5900CF2666 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3F52B710ED600CF2666 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FE26A4072B711B6500CF2666 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3FA2B710ED600CF2666 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		FE26A4082B711BD800CF2666 /* Champion */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A4092B711C0500CF2666 /* Main */,
+			);
+			path = Champion;
+			sourceTree = "<group>";
+		};
+		FE26A4092B711C0500CF2666 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		FE26A40B2B711CA600CF2666 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		FE26A4282B711F1400CF2666 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +188,6 @@
 			files = (
 				FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */,
 				FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */,
-				FE26A3F42B710ED500CF2666 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FE26A3F12B710ED500CF2666 /* ViewController.swift in Sources */,
+				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +207,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FE26A3F22B710ED500CF2666 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FE26A3F32B710ED500CF2666 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -289,10 +341,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3L2WN7T88;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LOLInfoApp/Info.plist;
+				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -317,10 +368,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = L3L2WN7T88;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = LOLInfoApp/Info.plist;
+				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
