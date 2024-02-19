@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */; };
-		F272E2532B7E0CAE00F05B31 /* ChampionMainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */; };
+		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
 		F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */; };
 		F2BE134E2B7DD0470029E980 /* NetworkURLStringCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE134D2B7DD0470029E980 /* NetworkURLStringCollection.swift */; };
 		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
@@ -23,7 +23,7 @@
 /* Begin PBXFileReference section */
 		67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
-		F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainModel.swift; sourceTree = "<group>"; };
+		F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListDTO.swift; sourceTree = "<group>"; };
 		F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAPIEndpoint.swift; sourceTree = "<group>"; };
 		F2BE134D2B7DD0470029E980 /* NetworkURLStringCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkURLStringCollection.swift; sourceTree = "<group>"; };
 		F2BE13522B7DD3E10029E980 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
@@ -169,8 +169,8 @@
 		FE26A4092B711C0500CF2666 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
-				F272E2522B7E0CAE00F05B31 /* ChampionMainModel.swift */,
+				FEA540162B836EA200AB6FA2 /* PresentationLayer */,
+				FEA540152B836E9000AB6FA2 /* DataLayer */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -189,6 +189,22 @@
 				F2BE13512B7DD3D50029E980 /* Extension */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		FEA540152B836E9000AB6FA2 /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		FEA540162B836EA200AB6FA2 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
+			);
+			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,7 +324,7 @@
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
 				F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */,
-				F272E2532B7E0CAE00F05B31 /* ChampionMainModel.swift in Sources */,
+				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
 				F2BE134E2B7DD0470029E980 /* NetworkURLStringCollection.swift in Sources */,
 				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
