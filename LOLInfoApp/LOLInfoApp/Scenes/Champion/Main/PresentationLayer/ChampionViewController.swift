@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChampionViewController: UIViewController {
+final class ChampionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
