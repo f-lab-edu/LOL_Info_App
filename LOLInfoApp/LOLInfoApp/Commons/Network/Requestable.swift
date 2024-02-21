@@ -33,32 +33,10 @@ extension Requestable {
     }
     
     private func loggingRequest() {
-        os_log(
-               """
-               Start Rquest
-               URL: %@
-               HTTPMethod: %@
-               """,
-               log: .network,
-               url,
-               httpMethod.rawValue
-        )
+        Log.network("Start Request", url, "HTTPMethod: \(httpMethod.rawValue)")
     }
     
-    private func loggingResponse(
-        _ dataResponse: AFDataResponse<Data?>
-    ) {
-        let statusCode = dataResponse.response?.statusCode
-        let statusCodeString = statusCode == nil ? "nil" : "\(statusCode ?? 0)"
-        os_log(
-               """
-               Complete Response
-               StatusCode: %@
-               """,
-               log: .network,
-               statusCodeString
-        )
-        guard let error = dataResponse.error else { return }
-        os_log("Error: %@", log: .networkError, error as CVarArg)
-    }
-}
+    private func loggingResponse(_ dataResponse: AFDataResponse<Data?>) {
+        let statusCode: Any = dataResponse.response?.statusCode ?? "nil"
+        Log.network("Complete Response", url, "StatusCode: \(statusCode)")
+    }}
