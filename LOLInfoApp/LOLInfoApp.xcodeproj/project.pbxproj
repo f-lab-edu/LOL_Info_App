@@ -20,6 +20,7 @@
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 		FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */; };
 		FEA540232B8650E500AB6FA2 /* ChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */; };
+		FEA540252B86528E00AB6FA2 /* ChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540242B86528E00AB6FA2 /* ChampionMainRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListEntity.swift; sourceTree = "<group>"; };
+		FEA540242B86528E00AB6FA2 /* ChampionMainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */,
+				FEA540242B86528E00AB6FA2 /* ChampionMainRepository.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEA540232B8650E500AB6FA2 /* ChampionMainListEntity.swift in Sources */,
+				FEA540252B86528E00AB6FA2 /* ChampionMainRepository.swift in Sources */,
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
