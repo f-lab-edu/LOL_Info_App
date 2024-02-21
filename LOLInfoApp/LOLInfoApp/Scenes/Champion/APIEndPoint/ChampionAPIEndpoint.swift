@@ -28,7 +28,7 @@ enum ChampionAPIEndpoint: Requestable {
     var url: String {
         switch self {
         case .main:
-            return NetworkURLStringCollection.baseURLString + path
+            return Bundle.getURLString(key: .baseURL) + path
         }
     }
     
