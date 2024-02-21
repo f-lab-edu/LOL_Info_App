@@ -8,10 +8,5 @@
 import UIKit
 
 final class ChampionViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-
 }
 

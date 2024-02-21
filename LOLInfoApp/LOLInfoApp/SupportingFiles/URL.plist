@@ -3,6 +3,6 @@
 <plist version="1.0">
 <dict>
 	<key>baseURL</key>
-	<string>https://ddragon.leagueoflegends.com/cdn/14.2.</string>
+	<string>https://ddragon.leagueoflegends.com/cdn/14.2.1</string>
 </dict>
 </plist>

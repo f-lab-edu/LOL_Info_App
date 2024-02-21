@@ -53,7 +53,6 @@ struct Log {
 }
 
 extension Log {
-    
     static func debug(
         _ message: Any,
         _ arguments: Any...,
