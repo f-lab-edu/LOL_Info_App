@@ -13,7 +13,9 @@ struct ChampionMainListDTO: Decodable {
 
 extension ChampionMainListDTO {
     struct ChampionMainDTO: Decodable, Hashable {
-        let name, title, id: String
+        let name: String
+        let title: String
+        let id: String
         let tags: [Tag]
     }
     
