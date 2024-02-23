@@ -11,7 +11,9 @@ struct ChampionMainListEntity {
     let championList: [ChampionMainEntity]
     
     struct ChampionMainEntity {
-        let name, title, id: String
+        let name: String
+        let title: String
+        let id: String
         let roleGroup: [RoleGrop]
     }
 }
