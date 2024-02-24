@@ -22,6 +22,9 @@
 		FEA540232B8650E500AB6FA2 /* ChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */; };
 		FEA540252B86528E00AB6FA2 /* ChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540242B86528E00AB6FA2 /* ChampionMainRepository.swift */; };
 		FEA540282B89E81F00AB6FA2 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540272B89E81F00AB6FA2 /* UIColor.swift */; };
+		FEA5402C2B89EA7400AB6FA2 /* ChampionMainCollectionViewLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5402B2B89EA7400AB6FA2 /* ChampionMainCollectionViewLayoutProvider.swift */; };
+		FEA540302B89EC3F00AB6FA2 /* ChampionMainFavoriteListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5402F2B89EC3F00AB6FA2 /* ChampionMainFavoriteListCell.swift */; };
+		FEA540322B89EC4D00AB6FA2 /* ChampionMainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540312B89EC4D00AB6FA2 /* ChampionMainListCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListEntity.swift; sourceTree = "<group>"; };
 		FEA540242B86528E00AB6FA2 /* ChampionMainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainRepository.swift; sourceTree = "<group>"; };
 		FEA540272B89E81F00AB6FA2 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		FEA5402B2B89EA7400AB6FA2 /* ChampionMainCollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
+		FEA5402F2B89EC3F00AB6FA2 /* ChampionMainFavoriteListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainFavoriteListCell.swift; sourceTree = "<group>"; };
+		FEA540312B89EC4D00AB6FA2 /* ChampionMainListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,7 +220,7 @@
 		FEA540162B836EA200AB6FA2 /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
+				FEA5402A2B89EA6200AB6FA2 /* Views */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -233,6 +239,41 @@
 				FEA540272B89E81F00AB6FA2 /* UIColor.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		FEA540292B89EA5900AB6FA2 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5402E2B89EC3200AB6FA2 /* LayoutProvider */,
+				FEA5402D2B89EBBA00AB6FA2 /* Cell */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		FEA5402A2B89EA6200AB6FA2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */,
+				FEA540292B89EA5900AB6FA2 /* CollectionView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FEA5402D2B89EBBA00AB6FA2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5402F2B89EC3F00AB6FA2 /* ChampionMainFavoriteListCell.swift */,
+				FEA540312B89EC4D00AB6FA2 /* ChampionMainListCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		FEA5402E2B89EC3200AB6FA2 /* LayoutProvider */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5402B2B89EA7400AB6FA2 /* ChampionMainCollectionViewLayoutProvider.swift */,
+			);
+			path = LayoutProvider;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,9 +395,12 @@
 				FEA540252B86528E00AB6FA2 /* ChampionMainRepository.swift in Sources */,
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */,
+				FEA540302B89EC3F00AB6FA2 /* ChampionMainFavoriteListCell.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
+				FEA5402C2B89EA7400AB6FA2 /* ChampionMainCollectionViewLayoutProvider.swift in Sources */,
 				F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
+				FEA540322B89EC4D00AB6FA2 /* ChampionMainListCell.swift in Sources */,
 				FEA540282B89E81F00AB6FA2 /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
 				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
