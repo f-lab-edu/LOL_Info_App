@@ -23,7 +23,7 @@ final class ChampionMainFavoriteListCell: UICollectionViewCell {
     }
     
     private enum Color {
-        static let backgroundColor: UIColor? = .Custom.base.color
+        static let contentViewBackground: UIColor? = .Custom.base.color
         static let imageViewBorder: UIColor? = .Custom.reverseBase.color
         static let imageViewBackground: UIColor? = .gray
     }
@@ -68,7 +68,7 @@ final class ChampionMainFavoriteListCell: UICollectionViewCell {
     // MARK: - Configure Function
     
     private func configureInit() {
-        contentView.backgroundColor = Color.backgroundColor
+        contentView.backgroundColor = Color.contentViewBackground
     }
     
     // MARK: - Layout Function

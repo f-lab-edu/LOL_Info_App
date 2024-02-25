@@ -26,7 +26,7 @@ final class ChampionMainFavoriteListSectionHeader: UICollectionReusableView {
     }
     
     private enum Color {
-        static let separatorView: UIColor? = .Custom.separator.color
+        static let separatorViewBackground: UIColor? = .Custom.separator.color
     }
     
     private enum Font {
@@ -37,7 +37,7 @@ final class ChampionMainFavoriteListSectionHeader: UICollectionReusableView {
     
     private let separatorView: UIView = {
         let view = UIView()
-        view.backgroundColor = Color.separatorView
+        view.backgroundColor = Color.separatorViewBackground
         return view
     }()
 
@@ -82,5 +82,4 @@ final class ChampionMainFavoriteListSectionHeader: UICollectionReusableView {
             $0.bottom.equalToSuperview().inset(Metric.titleLabelTopAndBottom)
         }
     }
-    
 }

@@ -10,6 +10,8 @@ import UIKit
 
 final class ChampionMainViewController: UIViewController {
     
+    // MARK: - Type
+    
     enum DatasourceSection: Int {
         case favoriteList
         case mainList
@@ -29,11 +31,11 @@ final class ChampionMainViewController: UIViewController {
     private enum Text {
         static let title: String = "챔피언"
         static let searchControllerPlaceholder: String = "챔피언 검색"
-        static let searchControllerCacelButtonText: String = "취소"
+        static let searchControllerCancelButtonText: String = "취소"
     }
     
     private enum Color {
-        static let background: UIColor? = .Custom.base.color
+        static let viewBackground: UIColor? = .Custom.base.color
     }
     
     // MARK: - Properties
@@ -42,7 +44,7 @@ final class ChampionMainViewController: UIViewController {
         let controller = UISearchController()
         controller.searchBar.placeholder = Text.searchControllerPlaceholder
         controller.searchBar.setValue(
-            Text.searchControllerCacelButtonText,
+            Text.searchControllerCancelButtonText,
             forKey: "cancelButtonText"
         )
         return controller
@@ -96,7 +98,7 @@ final class ChampionMainViewController: UIViewController {
     }
     
     private func configureViewController() {
-        view.backgroundColor = Color.background
+        view.backgroundColor = Color.viewBackground
         title = Text.title
     }
     
@@ -108,7 +110,7 @@ final class ChampionMainViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.backgroundColor = Color.background
+        collectionView.backgroundColor = Color.viewBackground
         setDataSource()
         setSectionHeader()
         snapshot.appendSections([.favoriteList, .mainList])

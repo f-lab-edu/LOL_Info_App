@@ -27,7 +27,7 @@ final class ChampionMainListCell: UICollectionViewCell {
     }
     
     private enum Color {
-        static let backgroundColor: UIColor? = .Custom.base.color
+        static let contentViewBackground: UIColor? = .Custom.base.color
         static let imageViewBorder: UIColor? = .Custom.reverseBase.color
         static let imageViewBackground: UIColor? = .gray
         static let roleLabelText: UIColor? = .systemGray
@@ -79,7 +79,7 @@ final class ChampionMainListCell: UICollectionViewCell {
     // MARK: - Configure Function
     
     private func configureInit() {
-        contentView.backgroundColor = Color.backgroundColor
+        contentView.backgroundColor = Color.contentViewBackground
     }
     
     // MARK: - Layout Function

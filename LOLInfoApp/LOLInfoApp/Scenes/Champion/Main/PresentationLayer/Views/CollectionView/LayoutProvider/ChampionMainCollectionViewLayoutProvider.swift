@@ -63,13 +63,13 @@ struct ChampionMainCollectionViewLayoutProvider {
             bottom: Metric.favoriteSectionBottom,
             trailing: Metric.favoriteSectionInset
         )
-        let sectionHeadeSize = NSCollectionLayoutSize(
+        let sectionHeaderSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(Metric.sectionHeaderWidth),
             heightDimension: .estimated(Metric.sectionHeaderHeight)
         )
         section.boundarySupplementaryItems = [
             NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: sectionHeadeSize,
+                layoutSize: sectionHeaderSize,
                 elementKind: UICollectionView.elementKindSectionHeader,
                 alignment: .top
             )
@@ -106,13 +106,13 @@ struct ChampionMainCollectionViewLayoutProvider {
             bottom: Metric.mainSectionBottom,
             trailing: Metric.mainSectionSide
         )
-        let sectionHeadeSize = NSCollectionLayoutSize(
+        let sectionHeaderSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(Metric.sectionHeaderWidth),
             heightDimension: .estimated(Metric.sectionHeaderHeight)
         )
         section.boundarySupplementaryItems = [
             NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: sectionHeadeSize,
+                layoutSize: sectionHeaderSize,
                 elementKind: UICollectionView.elementKindSectionHeader,
                 alignment: .top
             )
