@@ -24,15 +24,30 @@ final class ChampionMainViewController: UIViewController {
     typealias Section = ChampionMainViewController.DatasourceSection
     typealias DataSource = (items: [Item], section: Section)
     
+    // MARK: - Literal
+    
+    private enum Text {
+        static let title: String = "챔피언"
+        static let searchControllerPlaceholder: String = "챔피언 검색"
+        static let searchControllerCacelButtonText: String = "취소"
+    }
+    
+    private enum Color {
+        static let background: UIColor? = .Custom.base.color
+    }
+    
     // MARK: - Properties
     
     private let searchController: UISearchController = {
         let controller = UISearchController()
-        controller.searchBar.placeholder = "챔피언 검색"
-        controller.searchBar.setValue("취소", forKey: "cancelButtonText")
+        controller.searchBar.placeholder = Text.searchControllerPlaceholder
+        controller.searchBar.setValue(
+            Text.searchControllerCacelButtonText,
+            forKey: "cancelButtonText"
+        )
         return controller
     }()
-
+    
     private let collectionView: UICollectionView = {
         let collectionView = UICollectionView(
             frame: .zero,
@@ -46,6 +61,16 @@ final class ChampionMainViewController: UIViewController {
             ChampionMainListCell.self,
             forCellWithReuseIdentifier: ChampionMainListCell.identifier
         )
+        collectionView.register(
+            ChampionMainFavoriteListSectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: ChampionMainFavoriteListSectionHeader.identifier
+        )
+        collectionView.register(
+            ChampionMainListSectionHeader.self,
+            forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+            withReuseIdentifier: ChampionMainListSectionHeader.identifier
+        )
         return collectionView
     }()
     
@@ -53,7 +78,7 @@ final class ChampionMainViewController: UIViewController {
     
     private var datasource: UICollectionViewDiffableDataSource<Section, Item>?
     private var snapshot = NSDiffableDataSourceSnapshot<Section, Item>()
-
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -71,8 +96,8 @@ final class ChampionMainViewController: UIViewController {
     }
     
     private func configureViewController() {
-        view.backgroundColor = .Custom.base.color
-        title = "챔피언"
+        view.backgroundColor = Color.background
+        title = Text.title
     }
     
     private func configureNavigationController() {
@@ -83,7 +108,13 @@ final class ChampionMainViewController: UIViewController {
     }
     
     private func configureCollectionView() {
-        collectionView.backgroundColor = .Custom.base.color
+        collectionView.backgroundColor = Color.background
+        setDataSource()
+        setSectionHeader()
+        snapshot.appendSections([.favoriteList, .mainList])
+    }
+    
+    private func setDataSource() {
         datasource = UICollectionViewDiffableDataSource<Section, Item>(
             collectionView: collectionView
         ) { (collectionView, indexPath, item) -> UICollectionViewCell? in
@@ -93,9 +124,7 @@ final class ChampionMainViewController: UIViewController {
                     withReuseIdentifier: ChampionMainFavoriteListCell.identifier,
                     for: indexPath
                 )
-                cell.backgroundColor = .black
                 return cell
-                
             case .mainList(_):
                 guard let cell = collectionView.dequeueReusableCell(
                     withReuseIdentifier: ChampionMainListCell.identifier,
@@ -104,7 +133,27 @@ final class ChampionMainViewController: UIViewController {
                 return cell
             }
         }
-        snapshot.appendSections([.favoriteList, .mainList])
+    }
+    
+    private func setSectionHeader() {
+        datasource?.supplementaryViewProvider = { collectionView, kind, indexPath in
+            switch indexPath.section {
+            case 0:
+                let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: ChampionMainFavoriteListSectionHeader.identifier,
+                    for: indexPath
+                )
+                return header
+            default:
+                let header = collectionView.dequeueReusableSupplementaryView(
+                    ofKind: UICollectionView.elementKindSectionHeader,
+                    withReuseIdentifier: ChampionMainListSectionHeader.identifier,
+                    for: indexPath
+                )
+                return header
+            }
+        }
     }
     
     // MARK: - Layout Function
