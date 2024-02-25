@@ -49,7 +49,7 @@ extension ChampionMainListDTO.ChampionMainDTO {
 }
 
 extension ChampionMainListDTO.Tag {
-    func toEntity() -> ChampionMainListEntity.RoleGrop {
+    func toEntity() -> ChampionMainListEntity.RoleGroup {
         switch self {
         case .assassin:
             return .assassin
