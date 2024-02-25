@@ -14,6 +14,7 @@ extension UIColor {
     enum Custom: String {
         case base
         case reverseBase
+        case separator
         
         var color: UIColor? {
             return UIColor(named: self.rawValue)
