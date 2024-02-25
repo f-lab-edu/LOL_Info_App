@@ -8,5 +8,9 @@
 import UIKit
 
 final class ChampionViewController: UIViewController {
+    
+    // TODO
+    // Data Layer 구현 이후 UI 구현할 예정입니다.
+    
 }
 

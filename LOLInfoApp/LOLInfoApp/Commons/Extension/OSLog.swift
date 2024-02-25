@@ -8,21 +8,25 @@
 import Foundation
 import OSLog
 
+// MARK: - OSLog Properties
+
 extension OSLog {
     static let subsystem = Bundle.main.bundleIdentifier ?? ""
-    static let network = OSLog(subsystem: subsystem, category: "Network")
-    static let debug = OSLog(subsystem: subsystem, category: "Debug")
-    static let error = OSLog(subsystem: subsystem, category: "Error")
 }
 
+// MARK: - Log Level
 
-struct Log {
+enum Log {
     enum Level: String {
         case network = "🔵 NETWORK"
         case debug = "🟡 DEBUG"
         case error = "🔴 ERROR"
     }
-    
+}
+
+// MARK: - Log Private Helper Function
+
+extension Log {
     static private func log(
         _ message: Any,
         _ arguments: [Any],
@@ -32,13 +36,44 @@ struct Log {
         line: Int
     ) {
         #if DEBUG
-        let fileName = file.split(separator: "/").last ?? ""
-        let extraMessage = arguments.map({ String(describing: $0) }).joined(separator: "\n")
-        var logMessage = "\nMessage: \(message)\n\(extraMessage)"
+        let logMessage = getLogMessage(message,
+                                       arguments,
+                                       level: level,
+                                       file: file,
+                                       function: function,
+                                       line: line)
+        handleLoggingForLevel(logMessage: logMessage, level: level)
+        #endif
+    }
+    
+    static private func getLogMessage(
+        _ message: Any,
+        _ arguments: [Any],
+        level: Level,
+        file: String,
+        function: String,
+        line: Int
+    ) -> String {
+        let fileName = file.split(separator: Constants.separator).last ?? ""
+        let argumentsMessage = arguments
+            .map { String(describing: $0) }
+            .joined(separator: Constants.lineBreak)
+        let mainMessage = "\(Constants.lineBreak)Message: \(message)\(Constants.lineBreak)"
+        let extraMessage = "Arguments: \(Constants.lineBreak)\(argumentsMessage)"
+        var logMessage = mainMessage + extraMessage
         if level != .network {
-            let debugMessage = "\nFile: \(fileName)\nFunction: \(function)\nLine: \(line)"
-            logMessage.insert(contentsOf: "\(debugMessage)", at: logMessage.startIndex)
+            let fileMessage = "\(Constants.lineBreak)File: \(fileName)"
+            let functionMessage = "\(Constants.lineBreak)Function: \(function)"
+            let lineMessage = "\(Constants.lineBreak)Line: \(line)"
+            logMessage.insert(
+                contentsOf: fileMessage + functionMessage + lineMessage,
+                at: logMessage.startIndex
+            )
         }
+        return logMessage
+    }
+    
+    static private func handleLoggingForLevel(logMessage: String, level: Level) {
         let logger = Logger(subsystem: OSLog.subsystem, category: level.rawValue)
         switch level {
         case .network:
@@ -48,9 +83,10 @@ struct Log {
         case .error:
             logger.error("\(logMessage, privacy: .public)")
         }
-        #endif
     }
 }
+
+// MARK: - Log Static Debug Function
 
 extension Log {
     static func debug(

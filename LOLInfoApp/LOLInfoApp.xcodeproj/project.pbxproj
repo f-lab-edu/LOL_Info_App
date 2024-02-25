@@ -17,6 +17,8 @@
 		FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionViewController.swift */; };
 		FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F52B710ED600CF2666 /* Assets.xcassets */; };
 		FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */; };
+		FE5823632B8B8C220085E41E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823622B8B8C220085E41E /* Constants.swift */; };
+		FE5823652B8B91C50085E41E /* ChampionPath.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5823642B8B91C50085E41E /* ChampionPath.plist */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 		FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */; };
 		FEA540232B8650E500AB6FA2 /* ChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */; };
@@ -38,6 +40,8 @@
 		FE26A3F52B710ED600CF2666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE26A3F82B710ED600CF2666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE26A3FA2B710ED600CF2666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FE5823622B8B8C220085E41E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FE5823642B8B91C50085E41E /* ChampionPath.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ChampionPath.plist; sourceTree = "<group>"; };
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		FEA540222B8650E500AB6FA2 /* ChampionMainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListEntity.swift; sourceTree = "<group>"; };
@@ -158,8 +162,8 @@
 		FE26A4072B711B6500CF2666 /* SupportingFiles */ = {
 			isa = PBXGroup;
 			children = (
+				FE5823662B8B91EC0085E41E /* Network */,
 				FE26A3FA2B710ED600CF2666 /* Info.plist */,
-				FEA540192B864D7800AB6FA2 /* URL.plist */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -193,10 +197,20 @@
 		FE26A4282B711F1400CF2666 /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				FE5823622B8B8C220085E41E /* Constants.swift */,
 				F272E2572B7E0E5900F05B31 /* Network */,
 				F2BE13512B7DD3D50029E980 /* Extension */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		FE5823662B8B91EC0085E41E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FEA540192B864D7800AB6FA2 /* URL.plist */,
+				FE5823642B8B91C50085E41E /* ChampionPath.plist */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		FEA540152B836E9000AB6FA2 /* DataLayer */ = {
@@ -286,6 +300,7 @@
 			files = (
 				FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */,
 				FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */,
+				FE5823652B8B91C50085E41E /* ChampionPath.plist in Resources */,
 				FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +359,7 @@
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionViewController.swift in Sources */,
+				FE5823632B8B8C220085E41E /* Constants.swift in Sources */,
 				F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,

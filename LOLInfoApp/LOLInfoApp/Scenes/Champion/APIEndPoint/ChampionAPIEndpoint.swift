@@ -6,6 +6,7 @@
 //
 
 import Foundation
+
 import Alamofire
 
 enum ChampionAPIEndpoint: Requestable {
@@ -19,7 +20,7 @@ enum ChampionAPIEndpoint: Requestable {
     var path: String {
         switch self {
         case .main:
-            return "/data/ko_KR/champion.json"
+            return Bundle.getChampionPathString(key: .main)
         }
     }
     
