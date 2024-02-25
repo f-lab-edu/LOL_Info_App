@@ -12,17 +12,22 @@ struct ChampionMainCollectionViewLayoutProvider {
     // MARK: - Literal
     
     private enum Metric {
-        static let basePadding: CGFloat = 8
+        static let baseSide: CGFloat = 16
+        static let sectionHeaderWidth: CGFloat = 1
+        static let sectionHeaderHeight: CGFloat = 50
+        
         static let favoriteItemSize: CGFloat = 1
         static let favoriteItemTopAndBottom: CGFloat = 0
         static let favoriteGroupSize: CGFloat = 100
-        static let favoriteSectionToAndBottom: CGFloat = 0
+        static let favoriteSectionInset: CGFloat = 0
+        static let favoriteSectionBottom: CGFloat = 15
+        
         static let mainItemSize: CGFloat = 1
-        static let mainItemTop: CGFloat = 8
-        static let mainItemBottom: CGFloat = 0
+        static let mainItemTopAndBottom: CGFloat = 0
         static let mainGroupWidth: CGFloat = 1
         static let mainGroupHeight: CGFloat = 70
         static let mainSectionTop: CGFloat = 0
+        static let mainSectionSide: CGFloat = 0
         static let mainSectionBottom: CGFloat = 8
     }
     
@@ -36,9 +41,9 @@ struct ChampionMainCollectionViewLayoutProvider {
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(
             top: Metric.favoriteItemTopAndBottom,
-            leading: Metric.basePadding,
+            leading: Metric.baseSide,
             bottom: Metric.favoriteItemTopAndBottom,
-            trailing: Metric.basePadding
+            trailing: Metric.baseSide
         )
         
         let grupSize = NSCollectionLayoutSize(
@@ -53,11 +58,22 @@ struct ChampionMainCollectionViewLayoutProvider {
         let section = NSCollectionLayoutSection(group: group)
         section.orthogonalScrollingBehavior = .continuous
         section.contentInsets = NSDirectionalEdgeInsets(
-            top: Metric.favoriteSectionToAndBottom,
-            leading: Metric.basePadding,
-            bottom: Metric.favoriteSectionToAndBottom,
-            trailing: Metric.basePadding
+            top: Metric.favoriteSectionInset,
+            leading: Metric.favoriteSectionInset,
+            bottom: Metric.favoriteSectionBottom,
+            trailing: Metric.favoriteSectionInset
         )
+        let sectionHeadeSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(Metric.sectionHeaderWidth),
+            heightDimension: .estimated(Metric.sectionHeaderHeight)
+        )
+        section.boundarySupplementaryItems = [
+            NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: sectionHeadeSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
+        ]
         return section
     }
     
@@ -68,10 +84,10 @@ struct ChampionMainCollectionViewLayoutProvider {
         )
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         item.contentInsets = NSDirectionalEdgeInsets(
-            top: Metric.mainItemTop,
-            leading: Metric.basePadding,
-            bottom: Metric.mainItemBottom,
-            trailing: Metric.basePadding
+            top: Metric.mainItemTopAndBottom,
+            leading: Metric.baseSide,
+            bottom: Metric.mainItemTopAndBottom,
+            trailing: Metric.baseSide
         )
         
         let groupSize = NSCollectionLayoutSize(
@@ -86,10 +102,21 @@ struct ChampionMainCollectionViewLayoutProvider {
         let section = NSCollectionLayoutSection(group: group)
         section.contentInsets = NSDirectionalEdgeInsets(
             top: Metric.mainSectionTop,
-            leading: Metric.basePadding,
+            leading: Metric.mainSectionSide,
             bottom: Metric.mainSectionBottom,
-            trailing: Metric.basePadding
+            trailing: Metric.mainSectionSide
         )
+        let sectionHeadeSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(Metric.sectionHeaderWidth),
+            heightDimension: .estimated(Metric.sectionHeaderHeight)
+        )
+        section.boundarySupplementaryItems = [
+            NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: sectionHeadeSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
+        ]
         return section
     }
 }

@@ -15,26 +15,27 @@ final class ChampionMainListCell: UICollectionViewCell {
     
     static let identifier = "ChampionMainListCell"
     
-    // MARK: - Enum
+    // MARK: - Literal
     
     private enum Metric {
         static let imageViewCornerRadius: CGFloat = 18.5
         static let imageViewSize: CGFloat = 45
         static let imageViewBoarder: CGFloat = 1
-        static let nameAndTitleLabelCenterY: CGFloat = -imageViewSize / 4
-        static let nameAndTitleLabelLeading: CGFloat = 6
+        static let nameAndTitleLabelTop: CGFloat = 5
+        static let nameAndTitleLabelLeading: CGFloat = 12
         static let roleLabelTop: CGFloat = 2
     }
     
     private enum Color {
-        static let imageViewBorder = UIColor.Custom.reverseBase.color
-        static let imageViewBackground = UIColor.gray
-        static let roleLabelText = UIColor.systemGray
+        static let backgroundColor: UIColor? = .Custom.base.color
+        static let imageViewBorder: UIColor? = .Custom.reverseBase.color
+        static let imageViewBackground: UIColor? = .gray
+        static let roleLabelText: UIColor? = .systemGray
     }
     
     private enum Font {
-        static let nameAndTitleLabel = UIFont.systemFont(ofSize: 15, weight: .semibold)
-        static let roleLabel = UIFont.systemFont(ofSize: 14, weight: .medium)
+        static let nameAndTitleLabel: UIFont = .systemFont(ofSize: 15, weight: .semibold)
+        static let roleLabel: UIFont = .systemFont(ofSize: 14, weight: .medium)
     }
     
     // MARK: - Properties
@@ -78,7 +79,7 @@ final class ChampionMainListCell: UICollectionViewCell {
     // MARK: - Configure Function
     
     private func configureInit() {
-        contentView.backgroundColor = .Custom.base.color
+        contentView.backgroundColor = Color.backgroundColor
     }
     
     // MARK: - Layout Function
@@ -100,12 +101,8 @@ final class ChampionMainListCell: UICollectionViewCell {
     private func setLayoutNameAndTitleLabel() {
         contentView.addSubview(nameAndTitleLabel)
         nameAndTitleLabel.snp.makeConstraints {
-            $0.centerY.equalTo(imageView).offset(
-                Metric.nameAndTitleLabelCenterY
-            )
-            $0.leading.equalTo(imageView.snp.trailing).offset(
-                Metric.nameAndTitleLabelLeading
-            )
+            $0.top.equalTo(imageView.snp.top).offset(Metric.nameAndTitleLabelTop)
+            $0.leading.equalTo(imageView.snp.trailing).offset(Metric.nameAndTitleLabelLeading)
             $0.trailing.equalToSuperview()
         }
     }
@@ -113,9 +110,7 @@ final class ChampionMainListCell: UICollectionViewCell {
     private func setLayoutRoleLabel() {
         contentView.addSubview(roleLabel)
         roleLabel.snp.makeConstraints {
-            $0.top.equalTo(nameAndTitleLabel.snp.bottom).offset(
-                Metric.roleLabelTop
-            )
+            $0.top.equalTo(nameAndTitleLabel.snp.bottom).offset(Metric.roleLabelTop)
             $0.leading.trailing.equalTo(nameAndTitleLabel)
         }
     }

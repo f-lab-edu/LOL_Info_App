@@ -13,18 +13,19 @@ final class ChampionMainFavoriteListCell: UICollectionViewCell {
     
     static let identifier = "ChampionMainFavoriteListCell"
     
-    // MARK: - Enum
+    // MARK: - Literal
     
     private enum Metric {
         static let imageViewCornerRadius: CGFloat = 18.5
         static let imageViewSize: CGFloat = 50
         static let imageViewBoarder: CGFloat = 1
-        static let imageViewBottom: CGFloat = 3
+        static let imageViewBottom: CGFloat = 10
     }
     
     private enum Color {
-        static let imageViewBorder = UIColor.Custom.reverseBase.color
-        static let imageViewBackground = UIColor.gray
+        static let backgroundColor: UIColor? = .Custom.base.color
+        static let imageViewBorder: UIColor? = .Custom.reverseBase.color
+        static let imageViewBackground: UIColor? = .gray
     }
     
     private enum Font {
@@ -46,7 +47,6 @@ final class ChampionMainFavoriteListCell: UICollectionViewCell {
     
     private let nameLabel: UILabel = {
         let label = UILabel()
-
         label.numberOfLines = 0
         label.font = Font.nameLabel
         label.textAlignment = .center
@@ -68,7 +68,7 @@ final class ChampionMainFavoriteListCell: UICollectionViewCell {
     // MARK: - Configure Function
     
     private func configureInit() {
-        contentView.backgroundColor = .Custom.base.color
+        contentView.backgroundColor = Color.backgroundColor
     }
     
     // MARK: - Layout Function
