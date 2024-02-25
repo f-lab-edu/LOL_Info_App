@@ -19,7 +19,7 @@ struct ChampionMainListEntity {
 }
 
 extension ChampionMainListEntity {
-    enum RoleGroup: String {
+    enum RoleGroup: String, CaseIterable {
         case assassin = "암살자"
         case fighter = "전사"
         case mage = "마법사"
