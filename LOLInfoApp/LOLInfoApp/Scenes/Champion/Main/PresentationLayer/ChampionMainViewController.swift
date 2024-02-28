@@ -25,12 +25,7 @@ final class ChampionMainViewController: UIViewController {
         controller.searchBar.placeholder = Text.searchControllerPlaceholder
         return controller
     }()
-    
-    private let collectionView: UICollectionView = {
-        let collectionView = ChampionMainCollectionView()
-        return collectionView
-    }()
-    
+    private let collectionView: UICollectionView = ChampionMainCollectionView()
     private let indicatorView = UIActivityIndicatorView(style: .large)
     
     // MARK: - LifeCycle

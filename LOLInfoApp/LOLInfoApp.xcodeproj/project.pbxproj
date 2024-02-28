@@ -14,6 +14,8 @@
 		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
 		F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13542B7DDD9D0029E980 /* Requestable.swift */; };
 		F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207C9802B8DB787009CE6CB /* UIColor.swift */; };
+		F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */; };
+		F2D1B6442B8EF6CF00340619 /* ChampionMainCollectionViewLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D1B6432B8EF6CF00340619 /* ChampionMainCollectionViewLayoutProvider.swift */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
 		FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */; };
 		FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */; };
@@ -37,6 +39,8 @@
 		4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AFB91F12F63ABE8AFFFD03 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F207C9802B8DB787009CE6CB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionView.swift; sourceTree = "<group>"; };
+		F2D1B6432B8EF6CF00340619 /* ChampionMainCollectionViewLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewLayoutProvider.swift; sourceTree = "<group>"; };
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 		F207C97D2B8DB6DB009CE6CB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */,
+				F28816B92B8EF1E900BD0B93 /* CollectionView */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -135,6 +141,15 @@
 				F207C9802B8DB787009CE6CB /* UIColor.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F28816B92B8EF1E900BD0B93 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */,
+				F2D1B6432B8EF6CF00340619 /* ChampionMainCollectionViewLayoutProvider.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		FE26A3E02B710ED500CF2666 = {
@@ -218,7 +233,6 @@
 				FE5823672B8B9D8E0085E41E /* DomainLayer */,
 				FEA540152B836E9000AB6FA2 /* DataLayer */,
 				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
-				FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -419,6 +433,8 @@
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
 				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
+				F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */,
+				F2D1B6442B8EF6CF00340619 /* ChampionMainCollectionViewLayoutProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
