@@ -7,9 +7,19 @@
 
 import Foundation
 
+// MARK: - typealias
+
+typealias ChampionMainEntity = ChampionMainListEntity.ChampionMainEntity
+
+// MARK: - ChampionMainListEntity
+
 struct ChampionMainListEntity {
     let championList: [ChampionMainEntity]
-    
+}
+
+// MARK: - ChampionMainEntity
+
+extension ChampionMainListEntity {
     struct ChampionMainEntity {
         let name: String
         let title: String
@@ -18,7 +28,9 @@ struct ChampionMainListEntity {
     }
 }
 
-extension ChampionMainListEntity {
+// MARK: - RoleGrop
+
+extension ChampionMainEntity {
     enum RoleGrop: String {
         case assassin = "암살자"
         case fighter = "전사"

@@ -49,9 +49,9 @@ extension Log {
     static private func getLogMessage(_ message: Any, _ arguments: [Any]) -> String {
         let argumentsMessage = arguments
             .map { String(describing: $0) }
-            .joined(separator: Constants.lineBreak)
-        let mainMessage = "\(Constants.lineBreak)Message: \(message)\(Constants.lineBreak)"
-        let extraMessage = "Arguments: \(Constants.lineBreak)\(argumentsMessage)"
+            .joined(separator: StringConstants.lineBreak)
+        let mainMessage = "\(StringConstants.lineBreak)Message: \(message)\(StringConstants.lineBreak)"
+        let extraMessage = "Arguments: \(StringConstants.lineBreak)\(argumentsMessage)"
         return mainMessage + extraMessage
     }
     
@@ -62,10 +62,10 @@ extension Log {
         line: Int
     ) -> String {
         guard level != .network else { return "" }
-        let fileName = file.split(separator: Constants.separator).last ?? ""
-        let fileMessage = "\(Constants.lineBreak)File: \(fileName)"
-        let functionMessage = "\(Constants.lineBreak)Function: \(function)"
-        let lineMessage = "\(Constants.lineBreak)Line: \(line)"
+        let fileName = file.split(separator: StringConstants.separator).last ?? ""
+        let fileMessage = "\(StringConstants.lineBreak)File: \(fileName)"
+        let functionMessage = "\(StringConstants.lineBreak)Function: \(function)"
+        let lineMessage = "\(StringConstants.lineBreak)Line: \(line)"
         return fileMessage + functionMessage + lineMessage
     }
     

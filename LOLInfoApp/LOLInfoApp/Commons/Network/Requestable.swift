@@ -21,11 +21,11 @@ protocol Requestable {
 
 extension Requestable {
     func requestData<T: Decodable>() -> AnyPublisher<T, Error> {
-        loggingRequest()
+        logging()
         return AF.request(url, method: httpMethod)
             .validate()
             .response { dataResponse in
-                loggingResponse(dataResponse)
+                logging(dataResponse)
             }
             .publishDecodable(type: T.self)
             .value()
@@ -33,11 +33,14 @@ extension Requestable {
             .eraseToAnyPublisher()
     }
     
-    private func loggingRequest() {
+    ////Logging API Request
+    private func logging() {
         Log.network("Start Request", url, "HTTPMethod: \(httpMethod.rawValue)")
     }
     
-    private func loggingResponse(_ dataResponse: AFDataResponse<Data?>) {
+    ////Logging API Response
+    private func logging(_ dataResponse: AFDataResponse<Data?>) {
         let statusCode: Any = dataResponse.response?.statusCode ?? "nil"
         Log.network("Complete Response", url, "StatusCode: \(statusCode)")
-    }}
+    }
+}

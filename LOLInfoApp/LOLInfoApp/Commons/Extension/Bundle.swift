@@ -10,8 +10,10 @@ import Foundation
 // MARK: - Helper Function
 
 extension Bundle {
-    private static func getPlistData(resource: String) ->  [String: Any ] {
-        guard let path = Self.main.path(forResource: resource, ofType: "plist") else { return [:] }
+    private static func getPlistData(resource: String) ->  [String: Any] {
+        guard let path = Self.main.path(forResource: resource, ofType: BundleFileType.plist) else {
+            return [:]
+        }
         guard let data = FileManager.default.contents(atPath: path) else { return [:] }
         guard let plistData = try? PropertyListSerialization.propertyList(
             from: data,
@@ -29,7 +31,7 @@ extension Bundle {
     }
     
     static func getURLString(key: URLKey) -> String {
-        return getPlistData(resource: "URL")[key.rawValue] as? String ?? ""
+        return getPlistData(resource: BundleResource.url)[key.rawValue] as? String ?? ""
     }
 }
 
@@ -41,6 +43,6 @@ extension Bundle {
     }
     
     static func getChampionPathString(key: ChampionPathKey) -> String {
-        return getPlistData(resource: "ChampionPath")[key.rawValue] as? String ?? ""
+        return getPlistData(resource: BundleResource.championPath)[key.rawValue] as? String ?? ""
     }
 }
