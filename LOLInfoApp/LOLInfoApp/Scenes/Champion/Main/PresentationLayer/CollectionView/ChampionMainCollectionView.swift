@@ -27,15 +27,23 @@ final class ChampionMainCollectionView: UICollectionView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    // MARK: - Layout Function
-    
+}
+
+// MARK: - Layout Function
+
+extension ChampionMainCollectionView {
+
     private func setCompositionalLayout() {
         let layout = UICollectionViewCompositionalLayout { (section, _) in
-            let sectionType = SectionType(rawValue: section) ?? .favoriteListSection
-            let layoutProvider = ChampionMainCollectionViewLayoutProvider()
-            return layoutProvider.getLayout(sectionType: sectionType)
+            let sectionType = SectionType(rawValue: section) ?? .favoriteList
+            let layoutProvider: CompositionalLayoutProvider = if sectionType == .mainList {
+                ChampionMainListLayoutProvider()
+            } else {
+                ChampionMainFavoriteListLayoutProvider()
+            }
+            return layoutProvider.getLayoutSection()
         }
         setCollectionViewLayout(layout, animated: true)
     }
-    
+
 }
