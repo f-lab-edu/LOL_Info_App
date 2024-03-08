@@ -8,5 +8,6 @@ target 'LOLInfoApp' do
   # Pods for LOLInfoApp
 
 pod 'Alamofire'
+pod 'SnapKit'
 
 end
