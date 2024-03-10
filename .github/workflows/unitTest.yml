@@ -1,0 +1,33 @@
+# This workflow will build a Swift project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-swift
+
+name: UnitTest
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build Xcode
+      run: |
+       pod install --repo-update --clean-install --project-directory=LOLInfoApp/
+       xcodebuild clean test -workspace LOLInfoApp/LOLInfoApp.xcworkspace -scheme LOLInfoApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest'
+
+    - name: Notify Failure on Slack
+      if: failure()
+      uses: 8398a7/action-slack@v3
+      with:
+        status: ${{ job.status }}
+        text: |
+            ⚠️⚠️⚠️ 테스트 실패! 에러를 확인해주세요. ⚠️⚠️⚠️
+            에러로그: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+      env:
+        SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
