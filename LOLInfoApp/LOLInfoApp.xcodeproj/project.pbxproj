@@ -10,7 +10,6 @@
 		2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
-		F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */; };
 		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
 		F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13542B7DDD9D0029E980 /* Requestable.swift */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
@@ -30,7 +29,6 @@
 		AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
 		F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Constants.swift"; sourceTree = "<group>"; };
 		F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListDTO.swift; sourceTree = "<group>"; };
-		F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAPIEndpoint.swift; sourceTree = "<group>"; };
 		F2BE13522B7DD3E10029E980 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		F2BE13542B7DDD9D0029E980 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,14 +90,6 @@
 				F2BE13542B7DDD9D0029E980 /* Requestable.swift */,
 			);
 			path = Network;
-			sourceTree = "<group>";
-		};
-		F272E25B2B7E104200F05B31 /* APIEndPoint */ = {
-			isa = PBXGroup;
-			children = (
-				F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */,
-			);
-			path = APIEndPoint;
 			sourceTree = "<group>";
 		};
 		F2BE13512B7DD3D50029E980 /* Extension */ = {
@@ -180,7 +170,6 @@
 		FE26A4082B711BD800CF2666 /* Champion */ = {
 			isa = PBXGroup;
 			children = (
-				F272E25B2B7E104200F05B31 /* APIEndPoint */,
 				FE26A4092B711C0500CF2666 /* Main */,
 			);
 			path = Champion;
@@ -371,7 +360,6 @@
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
 				F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
-				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
