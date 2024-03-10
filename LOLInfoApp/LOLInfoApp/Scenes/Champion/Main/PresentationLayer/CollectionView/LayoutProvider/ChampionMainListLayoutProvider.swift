@@ -3,7 +3,7 @@
 //  LOLInfoApp
 //
 //  Created by Jeong Deokho on 2024/03/08.
-//
+// swiftlint:disable nesting
 
 import UIKit
 
@@ -34,7 +34,7 @@ struct ChampionMainListLayoutProvider {
             static let height = 50.0
         }
     }
-    
+
 }
 
 // MARK: - Layout Function
@@ -91,3 +91,5 @@ extension ChampionMainListLayoutProvider: CompositionalLayoutProvider {
         return section
     }
 }
+
+// swiftlint:enable nesting

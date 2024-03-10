@@ -75,19 +75,19 @@ extension ChampionMainViewController {
         setLayoutCollectionView()
         setLayoutIndicatorView()
     }
-    
+
     private func setLayoutCollectionView() {
         view.addSubview(collectionView)
         collectionView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
     }
-    
+
     private func setLayoutIndicatorView() {
         view.addSubview(indicatorView)
         indicatorView.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
     }
-    
+
 }
