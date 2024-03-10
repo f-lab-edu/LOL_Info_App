@@ -28,6 +28,7 @@ extension Bundle {
 extension Bundle {
     enum URLKey: String {
         case baseURL
+        case squareImageURL
     }
     
     static func getURLString(key: URLKey) -> String {
