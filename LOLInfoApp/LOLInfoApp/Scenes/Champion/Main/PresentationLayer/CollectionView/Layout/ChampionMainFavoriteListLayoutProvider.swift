@@ -11,7 +11,6 @@ import UIKit
 // MARK: - Literal
 
 struct ChampionMainFavoriteListLayoutProvider {
-
     private enum Metric {
         enum Item {
             static let size = 1.0
@@ -33,26 +32,36 @@ struct ChampionMainFavoriteListLayoutProvider {
             static let height = 50.0
         }
     }
-
 }
 
 // MARK: - Layout Function
 
 extension ChampionMainFavoriteListLayoutProvider: CompositionalLayoutProvider {
+    func getLayoutSection() -> NSCollectionLayoutSection {
+        let group = getLayoutGroup()
+        let section = NSCollectionLayoutSection(group: group)
+        section.orthogonalScrollingBehavior = .continuous
+        section.contentInsets = NSDirectionalEdgeInsets(
+            top: Metric.Section.inset,
+            leading: Metric.Section.inset,
+            bottom: Metric.Section.bottom,
+            trailing: Metric.Section.inset
+        )
+        section.boundarySupplementaryItems = [getSectionHeader()]
+        return section
+    }
 
-    func getLayoutItem() -> NSCollectionLayoutItem {
-        let itemSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(Metric.Item.size),
-            heightDimension: .estimated(Metric.Item.size)
+    func getSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(Metric.Header.width),
+            heightDimension: .estimated(Metric.Header.height)
         )
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        item.contentInsets = NSDirectionalEdgeInsets(
-            top: Metric.Item.topAndBottom,
-            leading: Metric.Item.side,
-            bottom: Metric.Item.topAndBottom,
-            trailing: Metric.Item.side
-        )
-        return item
+        return
+            NSCollectionLayoutBoundarySupplementaryItem(
+                layoutSize: sectionHeaderSize,
+                elementKind: UICollectionView.elementKindSectionHeader,
+                alignment: .top
+            )
     }
 
     func getLayoutGroup() -> NSCollectionLayoutGroup {
@@ -68,30 +77,20 @@ extension ChampionMainFavoriteListLayoutProvider: CompositionalLayoutProvider {
         return group
     }
 
-    func getLayoutSection() -> NSCollectionLayoutSection {
-        let group = getLayoutGroup()
-        let section = NSCollectionLayoutSection(group: group)
-        section.orthogonalScrollingBehavior = .continuous
-        section.contentInsets = NSDirectionalEdgeInsets(
-            top: Metric.Section.inset,
-            leading: Metric.Section.inset,
-            bottom: Metric.Section.bottom,
-            trailing: Metric.Section.inset
+    func getLayoutItem() -> NSCollectionLayoutItem {
+        let itemSize = NSCollectionLayoutSize(
+            widthDimension: .fractionalWidth(Metric.Item.size),
+            heightDimension: .estimated(Metric.Item.size)
         )
-        let sectionHeaderSize = NSCollectionLayoutSize(
-            widthDimension: .fractionalWidth(Metric.Header.width),
-            heightDimension: .estimated(Metric.Header.height)
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+        item.contentInsets = NSDirectionalEdgeInsets(
+            top: Metric.Item.topAndBottom,
+            leading: Metric.Item.side,
+            bottom: Metric.Item.topAndBottom,
+            trailing: Metric.Item.side
         )
-        section.boundarySupplementaryItems = [
-            NSCollectionLayoutBoundarySupplementaryItem(
-                layoutSize: sectionHeaderSize,
-                elementKind: UICollectionView.elementKindSectionHeader,
-                alignment: .top
-            )
-        ]
-        return section
+        return item
     }
-
 }
 
 // swiftlint:enable nesting

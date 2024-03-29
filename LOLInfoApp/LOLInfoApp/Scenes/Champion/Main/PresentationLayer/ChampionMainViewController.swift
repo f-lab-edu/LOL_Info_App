@@ -25,7 +25,6 @@ final class ChampionMainViewController: UIViewController {
         controller.searchBar.placeholder = Text.searchControllerPlaceholder
         return controller
     }()
-
     private let collectionView = ChampionMainCollectionView()
     private let indicatorView = UIActivityIndicatorView(style: .large)
 
@@ -36,13 +35,11 @@ final class ChampionMainViewController: UIViewController {
         configureInit()
         setLayout()
     }
-
 }
 
 // MARK: - Configure Funtion
 
 extension ChampionMainViewController {
-
     private func configureInit() {
         configureViewController()
         configureNavigationController()
@@ -64,13 +61,11 @@ extension ChampionMainViewController {
     private func configureCollectionView() {
         collectionView.backgroundColor = .baseColor
     }
-
 }
 
 // MARK: - Layout Function
 
 extension ChampionMainViewController {
-
     private func setLayout() {
         setLayoutCollectionView()
         setLayoutIndicatorView()
@@ -89,5 +84,4 @@ extension ChampionMainViewController {
             $0.center.equalToSuperview()
         }
     }
-
 }

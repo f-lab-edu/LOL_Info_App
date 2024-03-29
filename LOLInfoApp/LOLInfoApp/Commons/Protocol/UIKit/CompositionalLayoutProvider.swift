@@ -8,14 +8,15 @@
 import UIKit
 
 protocol CompositionalLayoutProvider {
+    /// Compositional Layout을 만들때 필요한 Section을 생성하는 함수입니다.
+    func getLayoutSection() -> NSCollectionLayoutSection
 
-    /// Layout Group을 만들때 필요한 Item을 생성하는 함수입니다.
-    func getLayoutItem() -> NSCollectionLayoutItem
+    /// SectionHeader를 생성하는 함수입니다.
+    func getSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem
 
     /// Layout Section을 만들때 필요한 Gruop을 생성하는 함수입니다.
     func getLayoutGroup() -> NSCollectionLayoutGroup
 
-    /// Compositional Layout을 만들때 필요한 Section을 생성하는 함수입니다.
-    func getLayoutSection() -> NSCollectionLayoutSection
-
+    /// Layout Group을 만들때 필요한 Item을 생성하는 함수입니다.
+    func getLayoutItem() -> NSCollectionLayoutItem
 }

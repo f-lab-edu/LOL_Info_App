@@ -9,12 +9,9 @@ import UIKit
 
 final class ChampionMainCollectionView: UICollectionView {
 
-    // MARK: - SectionType
+    // MARK: - typealias
 
-    enum SectionType: Int {
-        case favoriteList
-        case mainList
-    }
+    typealias SectionType = ChampionMainCollectionViewSectionType
 
     // MARK: - LifeCycle
 
@@ -26,24 +23,17 @@ final class ChampionMainCollectionView: UICollectionView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
 }
 
 // MARK: - Layout Function
 
 extension ChampionMainCollectionView {
-
     private func setCompositionalLayout() {
         let layout = UICollectionViewCompositionalLayout { (section, _) in
             let sectionType = SectionType(rawValue: section) ?? .favoriteList
-            let layoutProvider: CompositionalLayoutProvider = if sectionType == .mainList {
-                ChampionMainListLayoutProvider()
-            } else {
-                ChampionMainFavoriteListLayoutProvider()
-            }
-            return layoutProvider.getLayoutSection()
+            let layoutFactory = ChampionMainCollectionViewLayoutFactory()
+            return layoutFactory.createLayout(sectionType: sectionType)
         }
         setCollectionViewLayout(layout, animated: true)
     }
-
 }
