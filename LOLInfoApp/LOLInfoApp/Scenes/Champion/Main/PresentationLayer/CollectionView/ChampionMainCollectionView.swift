@@ -8,25 +8,25 @@
 import UIKit
 
 final class ChampionMainCollectionView: UICollectionView {
-    
+
     // MARK: - SectionType
-    
-    enum SectionType: Int  {
+
+    enum SectionType: Int {
         case favoriteList
         case mainList
     }
-    
+
     // MARK: - LifeCycle
-    
+
     init() {
         super.init(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         setCompositionalLayout()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
+
 }
 
 // MARK: - Layout Function

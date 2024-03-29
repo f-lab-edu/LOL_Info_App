@@ -4,6 +4,7 @@
 //
 //  Created by Jeong Deokho on 2024/03/08.
 //
+// swiftlint:disable nesting
 
 import UIKit
 
@@ -32,13 +33,13 @@ struct ChampionMainFavoriteListLayoutProvider {
             static let height = 50.0
         }
     }
-    
+
 }
 
 // MARK: - Layout Function
 
 extension ChampionMainFavoriteListLayoutProvider: CompositionalLayoutProvider {
-    
+
     func getLayoutItem() -> NSCollectionLayoutItem {
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(Metric.Item.size),
@@ -90,4 +91,7 @@ extension ChampionMainFavoriteListLayoutProvider: CompositionalLayoutProvider {
         ]
         return section
     }
+
 }
+
+// swiftlint:enable nesting

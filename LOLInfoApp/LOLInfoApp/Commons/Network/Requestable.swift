@@ -15,7 +15,7 @@ protocol Requestable {
     var path: String { get }
     var url: String { get }
     var httpMethod: HTTPMethod { get }
-    
+
     func requestData<T: Decodable>() -> AnyPublisher<T, Error>
 }
 
@@ -32,13 +32,13 @@ extension Requestable {
             .mapError { $0 as Error }
             .eraseToAnyPublisher()
     }
-    
-    ////Logging API Request
+
+    /// Logging API Request
     private func logging() {
         Log.network("Start Request", url, "HTTPMethod: \(httpMethod.rawValue)")
     }
-    
-    ////Logging API Response
+
+    /// Logging API Response
     private func logging(_ dataResponse: AFDataResponse<Data?>) {
         let statusCode: Any = dataResponse.response?.statusCode ?? "nil"
         Log.network("Complete Response", url, "StatusCode: \(statusCode)")

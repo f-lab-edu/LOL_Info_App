@@ -15,7 +15,7 @@ typealias ChampionMainDTO = ChampionMainListDTO.ChampionMainDTO
 
 struct ChampionMainListDTO: Decodable {
     let data: [String: ChampionMainDTO]
-    
+
     func toEntity() -> ChampionMainListEntity {
         let list = self.data
             .map { $0.value.toEntity() }
@@ -31,7 +31,7 @@ extension ChampionMainListDTO {
         let title: String
         let id: String
         let tags: [Tag]
-        
+
         func toEntity() -> ChampionMainEntity {
             return ChampionMainListEntity.ChampionMainEntity(
                 name: self.name,
@@ -53,7 +53,7 @@ extension ChampionMainDTO {
         case marksman = "Marksman"
         case support = "Support"
         case tank = "Tank"
-        
+
         func toEntity() -> ChampionMainEntity.RoleGrop {
             switch self {
             case .assassin:
