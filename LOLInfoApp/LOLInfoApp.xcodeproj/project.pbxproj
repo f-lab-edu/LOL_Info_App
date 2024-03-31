@@ -35,10 +35,9 @@
 		FE5823892B9DD1030085E41E /* MockChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823882B9DD1030085E41E /* MockChampionMainRepository.swift */; };
 		FE58238B2B9DD1580085E41E /* MockChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
-		FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */; };
-		FEDA93A32BB962CC00ADAD9F /* ChampionMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */; };
 		FEDA93A82BB964D400ADAD9F /* ChampionMainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A72BB964D400ADAD9F /* ChampionMainPresenterTests.swift */; };
 		FEDA93AA2BB964FF00ADAD9F /* MockChampionMainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A92BB964FF00ADAD9F /* MockChampionMainUseCase.swift */; };
+		FEDA93B22BB9726C00ADAD9F /* ChampionMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93B12BB9726C00ADAD9F /* ChampionMainPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +90,7 @@
 		FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainPresenter.swift; sourceTree = "<group>"; };
 		FEDA93A72BB964D400ADAD9F /* ChampionMainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainPresenterTests.swift; sourceTree = "<group>"; };
 		FEDA93A92BB964FF00ADAD9F /* MockChampionMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChampionMainUseCase.swift; sourceTree = "<group>"; };
+		FEDA93B12BB9726C00ADAD9F /* ChampionMainPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionMainPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +131,7 @@
 		F207C97D2B8DB6DB009CE6CB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA93B12BB9726C00ADAD9F /* ChampionMainPresenter.swift */,
 				FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */,
 				F28816B92B8EF1E900BD0B93 /* CollectionView */,
 			);
@@ -220,6 +221,8 @@
 			children = (
 				FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */,
 				F2BE13522B7DD3E10029E980 /* OSLog.swift */,
+				FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */,
+				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -402,15 +405,6 @@
 			path = DataLayer;
 			sourceTree = "<group>";
 		};
-		FEA540162B836EA200AB6FA2 /* PresentationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
-				FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */,
-			);
-			path = PresentationLayer;
-			sourceTree = "<group>";
-		};
 		FEDA93A62BB9649000ADAD9F /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -579,6 +573,7 @@
 				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
 				F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
+				FEDA93B22BB9726C00ADAD9F /* ChampionMainPresenter.swift in Sources */,
 				FE58236E2B9DC1930085E41E /* ChampionMainUseCase.swift in Sources */,
 				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
