@@ -28,6 +28,9 @@
 		FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823682B8B9D8E0085E41E /* ChampionMainListEntity.swift */; };
 		FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
+		FEDA93AC2BB96EA200ADAD9F /* Coordinatorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93AB2BB96EA200ADAD9F /* Coordinatorable.swift */; };
+		FEDA93AE2BB96EF300ADAD9F /* ChampionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93AD2BB96EF300ADAD9F /* ChampionCoordinator.swift */; };
+		FEDA93B02BB96FE500ADAD9F /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93AF2BB96FE500ADAD9F /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +62,9 @@
 		FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionMainRepository.swift; sourceTree = "<group>"; };
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		FEDA93AB2BB96EA200ADAD9F /* Coordinatorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatorable.swift; sourceTree = "<group>"; };
+		FEDA93AD2BB96EF300ADAD9F /* ChampionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionCoordinator.swift; sourceTree = "<group>"; };
+		FEDA93AF2BB96FE500ADAD9F /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,7 @@
 		F2A002592B9AD01F00B69D10 /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA93AB2BB96EA200ADAD9F /* Coordinatorable.swift */,
 				F2A0025C2B9AD2F700B69D10 /* UIKit */,
 			);
 			path = Protocol;
@@ -221,6 +228,7 @@
 			children = (
 				FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */,
 				FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */,
+				FEDA93AF2BB96FE500ADAD9F /* AppCoordinator.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -254,6 +262,7 @@
 		FE26A4082B711BD800CF2666 /* Champion */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA93AD2BB96EF300ADAD9F /* ChampionCoordinator.swift */,
 				F272E25B2B7E104200F05B31 /* APIEndPoint */,
 				FE26A4092B711C0500CF2666 /* Main */,
 			);
@@ -432,6 +441,7 @@
 			files = (
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */,
+				FEDA93AC2BB96EA200ADAD9F /* Coordinatorable.swift in Sources */,
 				FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */,
 				FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */,
 				FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */,
@@ -441,6 +451,8 @@
 				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
 				F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
+				FEDA93B02BB96FE500ADAD9F /* AppCoordinator.swift in Sources */,
+				FEDA93AE2BB96EF300ADAD9F /* ChampionCoordinator.swift in Sources */,
 				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
 				F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */,

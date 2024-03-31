@@ -8,7 +8,6 @@
 import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
     var window: UIWindow?
 
     func scene(
@@ -18,10 +17,20 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     ) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let mainViewController = ChampionMainViewController()
-        let navigationController = UINavigationController(rootViewController: mainViewController)
+        let navigationController = getNavigationController()
+        let coordinator = AppCoordinator(
+            navigationController: navigationController
+        )
+        coordinator.start()
+
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
+    }
+
+    private func getNavigationController() -> UINavigationController {
+        let navigationController = UINavigationController()
+        navigationController.navigationBar.tintColor = .label
+        return navigationController
     }
 
 }
