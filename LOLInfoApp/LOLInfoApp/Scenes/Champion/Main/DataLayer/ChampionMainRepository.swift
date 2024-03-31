@@ -9,7 +9,7 @@ import Foundation
 
 import Combine
 
-protocol ChampionMainRepositoryDependency  {
+protocol ChampionMainRepositoryDependency {
     func requestAllChampionList() -> AnyPublisher<ChampionMainListEntity, Error>
 }
 
