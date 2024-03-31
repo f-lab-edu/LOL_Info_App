@@ -14,7 +14,7 @@ protocol ChampionMainUseCaseDependency {
     func getChampionMainListViewModels() -> AnyPublisher<[ChampionMainListViewModel], Error>
 }
 
-//MARK: - UseCase
+// MARK: - UseCase
 
 struct ChampionMainUseCase: ChampionMainUseCaseDependency {
     private let repository: ChampionMainRepositoryDependency

@@ -5,11 +5,8 @@
 //  Created by 정덕호 on 2024/03/10.
 //
 
-import XCTest
-
 import Combine
 import XCTest
-
 @testable import LOLInfoApp
 
 final class ChampionMainUseCaseTests: XCTestCase {
@@ -34,11 +31,11 @@ final class ChampionMainUseCaseTests: XCTestCase {
     }
 
     func test_getChampionMainListViewModels가ViewModels를_제대로_반환하는지() {
-        //given
+        // given
         let expectation = expectation(description: "getChampionMainListViewModels ViewModels")
         var result: [ChampionMainListViewModel]?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { _ in
             } receiveValue: { viewModels in
@@ -47,19 +44,19 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: 1)
         XCTAssertNotNil(result)
         XCTAssertFalse(result?.isEmpty ?? true)
     }
 
     func test_getChampionMainListViewModels가_에러를_제대로_반환하는지() {
-        //given
+        // given
         mockRepository.shouldReturnError = true
         let expectation = expectation(description: "getChampionMainListViewModels")
         var result: Error?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { completion in
                 if case let .failure(error) = completion {
@@ -70,18 +67,18 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: 1)
         XCTAssertNotNil(result)
         XCTAssertEqual(result as? MockError, MockError.mockError)
     }
 
     func test_sortByChampionName이_이름을_가나다_순으로_잘_정렬하는지() {
-        //given
+        // given
         let expectation = expectation(description: "sortByChampionName")
         var result: [ChampionMainListViewModel]?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { _ in
             } receiveValue: { viewModels in
@@ -90,7 +87,7 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: 1)
         XCTAssertEqual(result?[0].nameAndTtitleLabelText ?? "", "가렌 • 데마시아의 힘")
         XCTAssertEqual(result?[1].nameAndTtitleLabelText ?? "", "아리 • 구미호")

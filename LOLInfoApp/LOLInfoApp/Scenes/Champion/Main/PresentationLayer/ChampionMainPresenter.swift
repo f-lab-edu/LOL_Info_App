@@ -14,7 +14,6 @@ final class ChampionMainPresenter {
     private let useCase: ChampionMainUseCaseDependency
     private var cancellables: Set<AnyCancellable> = []
 
-
     init(useCase: ChampionMainUseCaseDependency = ChampionMainUseCase()) {
         self.useCase = useCase
     }
@@ -72,4 +71,3 @@ extension ChampionMainPresenter {
             .store(in: &cancellables)
     }
 }
-

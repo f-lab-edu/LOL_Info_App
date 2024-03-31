@@ -39,11 +39,11 @@ final class ChampionMainPresenterTests: XCTestCase {
     }
 
     func test_fetchAllChampionList가_정상응답일때_Indicator가_Off되는지() {
-        //given
+        // given
         let onOffIndicatorExpectation = expectation(description: "onOffIndicator")
         var onOffIndicator: [Bool] = []
 
-        //when
+        // when
         output.onOffIndicator.sink {
             onOffIndicator.append($0)
             guard onOffIndicator.count == 2 else { return }
@@ -53,17 +53,17 @@ final class ChampionMainPresenterTests: XCTestCase {
 
         input.fetchAllChampionList.send(())
 
-        //then
+        // then
         wait(for: [onOffIndicatorExpectation], timeout: 1)
         XCTAssertEqual(onOffIndicator, [true, false])
     }
 
     func test_fetchAllChampionList가_정상응답일때_mainListViewModels가_정상적으로_전달되는지() {
-        //given
+        // given
         let mainListViewModelsExpectation = expectation(description: "expectationMainListViewModels")
         var mainListViewModels: [ChampionMainListViewModel]?
 
-        //when
+        // when
         output.mainListViewModels.sink {
             mainListViewModels = $0
             mainListViewModelsExpectation.fulfill()
@@ -72,18 +72,18 @@ final class ChampionMainPresenterTests: XCTestCase {
 
         input.fetchAllChampionList.send(())
 
-        //then
+        // then
         wait(for: [mainListViewModelsExpectation], timeout: 1)
         XCTAssertNotNil(mainListViewModels)
     }
 
     func test_fetchAllChampionList가_에러응답일때_ShowRetryAlert에_에러메시지가_전달되는지() {
-        //given
+        // given
         mockUseCase.shouldReturnError = true
         let expectation = expectation(description: "ShowRetryAlert")
         var errorMessage: String = ""
 
-        //when
+        // when
         output.showRetryAlert.sink {
             errorMessage = $0
             expectation.fulfill()
@@ -92,7 +92,7 @@ final class ChampionMainPresenterTests: XCTestCase {
 
         input.fetchAllChampionList.send(())
 
-        //then
+        // then
         wait(for: [expectation], timeout: 1)
         XCTAssertEqual(errorMessage, MockError.mockError.localizedDescription)
     }
