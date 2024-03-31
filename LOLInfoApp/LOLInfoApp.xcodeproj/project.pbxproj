@@ -30,6 +30,9 @@
 		FE58238B2B9DD1580085E41E /* MockChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 		FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */; };
+		FEDA93A32BB962CC00ADAD9F /* ChampionMainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */; };
+		FEDA93A82BB964D400ADAD9F /* ChampionMainPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A72BB964D400ADAD9F /* ChampionMainPresenterTests.swift */; };
+		FEDA93AA2BB964FF00ADAD9F /* MockChampionMainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA93A92BB964FF00ADAD9F /* MockChampionMainUseCase.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,9 @@
 		FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChampionMainListEntity.swift; sourceTree = "<group>"; };
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainPresenter.swift; sourceTree = "<group>"; };
+		FEDA93A72BB964D400ADAD9F /* ChampionMainPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainPresenterTests.swift; sourceTree = "<group>"; };
+		FEDA93A92BB964FF00ADAD9F /* MockChampionMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChampionMainUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +294,7 @@
 			children = (
 				FE5823882B9DD1030085E41E /* MockChampionMainRepository.swift */,
 				FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */,
+				FEDA93A92BB964FF00ADAD9F /* MockChampionMainUseCase.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -304,6 +311,7 @@
 			isa = PBXGroup;
 			children = (
 				FE5823832B9DD0A90085E41E /* Mocks */,
+				FEDA93A62BB9649000ADAD9F /* PresentationLayer */,
 				FE5823822B9DD09F0085E41E /* DomainLayer */,
 			);
 			path = ChampionMain;
@@ -322,6 +330,15 @@
 			isa = PBXGroup;
 			children = (
 				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
+				FEDA93A22BB962CC00ADAD9F /* ChampionMainPresenter.swift */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		FEDA93A62BB9649000ADAD9F /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FEDA93A72BB964D400ADAD9F /* ChampionMainPresenterTests.swift */,
 			);
 			path = PresentationLayer;
 			sourceTree = "<group>";
@@ -472,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDA93A32BB962CC00ADAD9F /* ChampionMainPresenter.swift in Sources */,
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */,
 				FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */,
@@ -494,9 +512,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE58238B2B9DD1580085E41E /* MockChampionMainListEntity.swift in Sources */,
+				FEDA93A82BB964D400ADAD9F /* ChampionMainPresenterTests.swift in Sources */,
 				FE5823892B9DD1030085E41E /* MockChampionMainRepository.swift in Sources */,
 				FE5823862B9DD0CF0085E41E /* MockError.swift in Sources */,
 				FE58237A2B9DD0180085E41E /* LOLInfoAppTests.swift in Sources */,
+				FEDA93AA2BB964FF00ADAD9F /* MockChampionMainUseCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
