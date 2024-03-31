@@ -2,6 +2,11 @@
 리그오브 레전드 챔피언 정보 제공앱
 
 ## 사용 아키텍쳐 (MVVM With Clean Architecture)
+
+## 프로젝트 아키텍쳐 예시 다이어그램
+![아키텍쳐 다이어그램](https://github.com/f-lab-edu/LOL_Info_App/assets/93653997/9c546013-d53f-4e57-bd02-686c2f9a409a)
+
+## 아키텍쳐 설명
 <img width="800" alt="스크린샷 2024-02-19 오후 8 15 12" src="https://github.com/f-lab-edu/LOL_Info_App/assets/93653997/0929cb3e-fda9-4c8c-a59d-017d05704157">
 
 ### Presentation Layer
