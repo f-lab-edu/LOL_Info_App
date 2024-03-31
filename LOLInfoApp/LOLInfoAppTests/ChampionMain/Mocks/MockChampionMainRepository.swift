@@ -13,10 +13,8 @@ import Foundation
 // MARK: - Properties
 
 final class MockChampionMainRepository: ChampionMainRepositoryDependency {
-
     var shouldReturnError = false
     var mockEntity: ChampionMainListEntity!
-
 }
 
 // MARK: - Request Function

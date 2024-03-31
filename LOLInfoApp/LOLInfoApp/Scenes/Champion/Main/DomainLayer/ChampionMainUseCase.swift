@@ -17,7 +17,6 @@ protocol ChampionMainUseCaseDependency {
 //MARK: - UseCase
 
 struct ChampionMainUseCase: ChampionMainUseCaseDependency {
-
     private let repository: ChampionMainRepositoryDependency
 
     init(repository: ChampionMainRepositoryDependency = ChampionMainRepository()) {
