@@ -10,4 +10,5 @@ import Foundation
 enum StringConstants {
     static let separator: String = "/"
     static let lineBreak: String = "\n"
+    static let comma: String = ","
 }

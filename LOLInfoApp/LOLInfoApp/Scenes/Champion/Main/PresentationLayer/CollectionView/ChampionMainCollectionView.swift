@@ -36,12 +36,13 @@ extension ChampionMainCollectionView {
     private func setCompositionalLayout() {
         let layout = UICollectionViewCompositionalLayout { (section, _) in
             let sectionType = SectionType(rawValue: section) ?? .favoriteList
-            var layoutProvider: CompositionalLayoutProvider = if sectionType == .mainList {
-                ChampionMainListLayoutProvider()
+            var layoutProvider: CompositionalLayoutProvider?
+            if sectionType == .mainList {
+                layoutProvider = ChampionMainListLayoutProvider()
             } else {
-                ChampionMainFavoriteListLayoutProvider()
+                layoutProvider = ChampionMainFavoriteListLayoutProvider()
             }
-            return layoutProvider.getLayoutSection()
+            return layoutProvider?.getLayoutSection()
         }
         setCollectionViewLayout(layout, animated: true)
     }
