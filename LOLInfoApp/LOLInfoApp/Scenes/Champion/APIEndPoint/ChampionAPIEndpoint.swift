@@ -41,4 +41,5 @@ enum ChampionAPIEndpoint: Requestable {
             return .get
         }
     }
+
 }

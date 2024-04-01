@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207C9802B8DB787009CE6CB /* UIColor.swift */; };
+		F22715902BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */; };
+		F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
 		F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */; };
@@ -35,6 +37,8 @@
 		4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		D3AFB91F12F63ABE8AFFFD03 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F207C9802B8DB787009CE6CB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewLayoutFactory.swift; sourceTree = "<group>"; };
+		F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewScetionType.swift; sourceTree = "<group>"; };
 		F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Constants.swift"; sourceTree = "<group>"; };
 		F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListDTO.swift; sourceTree = "<group>"; };
 		F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAPIEndpoint.swift; sourceTree = "<group>"; };
@@ -144,19 +148,21 @@
 		F28816B92B8EF1E900BD0B93 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */,
 				F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */,
-				F2A002522B9ACA3A00B69D10 /* LayoutProvider */,
+				F2A002522B9ACA3A00B69D10 /* Layout */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		F2A002522B9ACA3A00B69D10 /* LayoutProvider */ = {
+		F2A002522B9ACA3A00B69D10 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
+				F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */,
 				F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */,
 				F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */,
 			);
-			path = LayoutProvider;
+			path = Layout;
 			sourceTree = "<group>";
 		};
 		F2A002592B9AD01F00B69D10 /* Protocol */ = {
@@ -447,6 +453,8 @@
 				F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */,
 				F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */,
 				F2A0025B2B9AD04400B69D10 /* CompositionalLayoutProvider.swift in Sources */,
+				F22715902BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift in Sources */,
+				F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
