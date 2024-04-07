@@ -10,3 +10,7 @@ UserInterfaceState.xcuserstate
 
 # fastlane
 vendor/
+.env.default
+Gemfile.lock
+LOLInfoApp.app.dSYM.zip
+LOLInfoApp.ipa

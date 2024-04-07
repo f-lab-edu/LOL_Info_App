@@ -1,0 +1,32 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+  desc "build app and upload to testflight"
+  lane :upload do
+    get_certificates
+    get_provisioning_profile
+    cocoapods(use_bundle_exec: false)
+    increment_build_number(
+        build_number: latest_testflight_build_number + 1
+    )
+    build_app(workspace: "LOLInfoApp.xcworkspace", scheme: "LOLInfoApp")
+    upload_to_testflight
+    slack(
+      message: "Testflight 배포 성공",
+      slack_url:  "https://hooks.slack.com/services/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"
+      )
+  end
