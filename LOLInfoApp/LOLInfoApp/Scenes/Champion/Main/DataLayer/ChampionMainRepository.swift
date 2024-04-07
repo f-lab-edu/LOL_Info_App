@@ -29,7 +29,7 @@ struct ChampionMainRepository: Requestable {
 
 // MARK: - Dependency
 
-protocol ChampionMainRepositoryDependency  {
+protocol ChampionMainRepositoryDependency {
     func requestAllChampionList() -> AnyPublisher<ChampionMainListEntity, Error>
 }
 
