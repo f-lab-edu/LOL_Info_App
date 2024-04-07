@@ -10,7 +10,7 @@ import Foundation
 // MARK: - Helper Function
 
 extension Bundle {
-    private static func getPlistData(resource: String) ->  [String: Any] {
+    private static func getPlistData(resource: String) -> [String: Any] {
         guard let path = Self.main.path(forResource: resource, ofType: BundleFileType.plist) else {
             return [:]
         }
@@ -23,26 +23,26 @@ extension Bundle {
     }
 }
 
-//MARK: - URL.plist
+// MARK: - URL.plist
 
 extension Bundle {
     enum URLKey: String {
         case baseURL
         case squareImageURL
     }
-    
+
     static func getURLString(key: URLKey) -> String {
         return getPlistData(resource: BundleResource.url)[key.rawValue] as? String ?? ""
     }
 }
 
-//MARK: - ChampionPath.plist
+// MARK: - ChampionPath.plist
 
 extension Bundle {
     enum ChampionPathKey: String {
         case main
     }
-    
+
     static func getChampionPathString(key: ChampionPathKey) -> String {
         return getPlistData(resource: BundleResource.championPath)[key.rawValue] as? String ?? ""
     }

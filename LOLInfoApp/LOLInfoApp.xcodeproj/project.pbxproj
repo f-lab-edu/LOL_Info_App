@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */; };
+		F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F207C9802B8DB787009CE6CB /* UIColor.swift */; };
+		F22715902BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */; };
+		F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
-		F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */; };
 		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
+		F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */; };
+		F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */; };
+		F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */; };
+		F2A0025B2B9AD04400B69D10 /* CompositionalLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0025A2B9AD04400B69D10 /* CompositionalLayoutProvider.swift */; };
 		F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13542B7DDD9D0029E980 /* Requestable.swift */; };
+		F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2F9932B9ADA89009812C3 /* Bundle.swift */; };
+		F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2F9952B9ADA8D009812C3 /* OSLog.swift */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
 		FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */; };
+		FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */; };
 		FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F52B710ED600CF2666 /* Assets.xcassets */; };
 		FE26A3F92B710ED600CF2666 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */; };
 		FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823622B8B8C220085E41E /* StringConstants.swift */; };
@@ -25,21 +33,29 @@
 		FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */; };
 		FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823712B9DC35B0085E41E /* FileNameConstants.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
-		FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
+		148E373A8A2129BF7F8C949F /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
+		4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		D3AFB91F12F63ABE8AFFFD03 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F207C9802B8DB787009CE6CB /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewLayoutFactory.swift; sourceTree = "<group>"; };
+		F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewScetionType.swift; sourceTree = "<group>"; };
 		F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Constants.swift"; sourceTree = "<group>"; };
 		F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListDTO.swift; sourceTree = "<group>"; };
-		F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionAPIEndpoint.swift; sourceTree = "<group>"; };
+		F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionView.swift; sourceTree = "<group>"; };
+		F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainFavoriteListLayoutProvider.swift; sourceTree = "<group>"; };
+		F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListLayoutProvider.swift; sourceTree = "<group>"; };
+		F2A0025A2B9AD04400B69D10 /* CompositionalLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutProvider.swift; sourceTree = "<group>"; };
 		F2BE13522B7DD3E10029E980 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		F2BE13542B7DDD9D0029E980 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
-		F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LOLInfoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2D2F9932B9ADA89009812C3 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
+		F2D2F9952B9ADA8D009812C3 /* OSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE26A3EE2B710ED500CF2666 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainViewController.swift; sourceTree = "<group>"; };
 		FE26A3F52B710ED600CF2666 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FE26A3F82B710ED600CF2666 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FE26A3FA2B710ED600CF2666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,28 +75,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DC61154A2A5FCF8BE3C5538 /* Pods_LOLInfoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		25DB05B03DB30208A2FA501B /* Frameworks */ = {
+		1836AE3F7B044CD5AFE9C5B1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F6FD4969E15C53F1EB411F81 /* Pods_LOLInfoApp.framework */,
+				4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */,
+				148E373A8A2129BF7F8C949F /* Pods-LOLInfoApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		256D0F82EF42589CCD24D097 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D3AFB91F12F63ABE8AFFFD03 /* Pods_LOLInfoApp.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EF13FB68FBA4340A81FF0CA8 /* Pods */ = {
+		F207C97D2B8DB6DB009CE6CB /* PresentationLayer */ = {
 			isa = PBXGroup;
 			children = (
-				67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */,
-				AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */,
+				FE26A3F02B710ED500CF2666 /* ChampionMainViewController.swift */,
+				F28816B92B8EF1E900BD0B93 /* CollectionView */,
 			);
-			path = Pods;
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		F207C97E2B8DB73D009CE6CB /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F2D2F9952B9ADA8D009812C3 /* OSLog.swift */,
+				F2D2F9932B9ADA89009812C3 /* Bundle.swift */,
+				F207C97F2B8DB77C009CE6CB /* UIKit */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		F207C97F2B8DB77C009CE6CB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F207C9802B8DB787009CE6CB /* UIColor.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 		F207C9822B8EA768009CE6CB /* Constants */ = {
@@ -101,21 +143,49 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		F272E25B2B7E104200F05B31 /* APIEndPoint */ = {
+		F28816B92B8EF1E900BD0B93 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				F272E25C2B7E105B00F05B31 /* ChampionAPIEndpoint.swift */,
+				F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */,
+				F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */,
+				F2A002522B9ACA3A00B69D10 /* Layout */,
 			);
-			path = APIEndPoint;
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
-		F2BE13512B7DD3D50029E980 /* Extension */ = {
+		F2A002522B9ACA3A00B69D10 /* Layout */ = {
 			isa = PBXGroup;
 			children = (
-				F2BE13522B7DD3E10029E980 /* OSLog.swift */,
-				FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */,
+				F227158F2BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift */,
+				F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */,
+				F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */,
 			);
-			path = Extension;
+			path = Layout;
+			sourceTree = "<group>";
+		};
+		F2A002592B9AD01F00B69D10 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F2A0025C2B9AD2F700B69D10 /* UIKit */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F2A0025C2B9AD2F700B69D10 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				F2A0025A2B9AD04400B69D10 /* CompositionalLayoutProvider.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		F2D2F9922B9ADA77009812C3 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */,
+				F2BE13522B7DD3E10029E980 /* OSLog.swift */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		FE26A3E02B710ED500CF2666 = {
@@ -123,8 +193,9 @@
 			children = (
 				FE26A3EB2B710ED500CF2666 /* LOLInfoApp */,
 				FE26A3EA2B710ED500CF2666 /* Products */,
-				EF13FB68FBA4340A81FF0CA8 /* Pods */,
-				25DB05B03DB30208A2FA501B /* Frameworks */,
+				1836AE3F7B044CD5AFE9C5B1 /* Pods */,
+				256D0F82EF42589CCD24D097 /* Frameworks */,
+				F2D2F9922B9ADA77009812C3 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -187,7 +258,6 @@
 		FE26A4082B711BD800CF2666 /* Champion */ = {
 			isa = PBXGroup;
 			children = (
-				F272E25B2B7E104200F05B31 /* APIEndPoint */,
 				FE26A4092B711C0500CF2666 /* Main */,
 			);
 			path = Champion;
@@ -196,9 +266,9 @@
 		FE26A4092B711C0500CF2666 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				FEA540162B836EA200AB6FA2 /* PresentationLayer */,
 				FE5823672B8B9D8E0085E41E /* DomainLayer */,
 				FEA540152B836E9000AB6FA2 /* DataLayer */,
+				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -215,7 +285,8 @@
 			children = (
 				F207C9822B8EA768009CE6CB /* Constants */,
 				F272E2572B7E0E5900F05B31 /* Network */,
-				F2BE13512B7DD3D50029E980 /* Extension */,
+				F2A002592B9AD01F00B69D10 /* Protocol */,
+				F207C97E2B8DB73D009CE6CB /* Extension */,
 			);
 			path = Commons;
 			sourceTree = "<group>";
@@ -262,11 +333,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE26A3FD2B710ED600CF2666 /* Build configuration list for PBXNativeTarget "LOLInfoApp" */;
 			buildPhases = (
-				B15D8544381B8BDEF74C11DC /* [CP] Check Pods Manifest.lock */,
+				87F18A5BFC3BDF679AF8AC9F /* [CP] Check Pods Manifest.lock */,
 				FE26A3E52B710ED500CF2666 /* Sources */,
 				FE26A3E62B710ED500CF2666 /* Frameworks */,
 				FE26A3E72B710ED500CF2666 /* Resources */,
-				218560BCE0F0172B41E96B59 /* [CP] Embed Pods Frameworks */,
+				FE0F4735628299EDE8FAA3CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -325,24 +396,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		218560BCE0F0172B41E96B59 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B15D8544381B8BDEF74C11DC /* [CP] Check Pods Manifest.lock */ = {
+		87F18A5BFC3BDF679AF8AC9F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -364,6 +418,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		FE0F4735628299EDE8FAA3CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -373,18 +444,25 @@
 			files = (
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */,
+				F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */,
 				FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */,
-				FEA5401C2B864E9C00AB6FA2 /* Bundle.swift in Sources */,
 				FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */,
 				FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */,
-				F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
 				FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */,
+				F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */,
 				F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */,
+				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
+				F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
 				FE58236E2B9DC1930085E41E /* ChampionMainUseCase.swift in Sources */,
-				F272E25D2B7E105B00F05B31 /* ChampionAPIEndpoint.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
+				F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */,
+				F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */,
+				F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */,
+				F2A0025B2B9AD04400B69D10 /* CompositionalLayoutProvider.swift in Sources */,
+				F22715902BB69AF800B498FB /* ChampionMainCollectionViewLayoutFactory.swift in Sources */,
+				F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -518,13 +596,13 @@
 		};
 		FE26A3FE2B710ED600CF2666 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67871AC6812ED22C5DD6D452 /* Pods-LOLInfoApp.debug.xcconfig */;
+			baseConfigurationReference = 4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L3L2WN7T88;
+				DEVELOPMENT_TEAM = G42AKFB24M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -546,13 +624,13 @@
 		};
 		FE26A3FF2B710ED600CF2666 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AAC6A67316489E7B8F198B9C /* Pods-LOLInfoApp.release.xcconfig */;
+			baseConfigurationReference = 148E373A8A2129BF7F8C949F /* Pods-LOLInfoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L3L2WN7T88;
+				DEVELOPMENT_TEAM = G42AKFB24M;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
