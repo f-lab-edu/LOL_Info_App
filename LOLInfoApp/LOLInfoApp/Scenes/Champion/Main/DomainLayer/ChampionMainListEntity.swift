@@ -24,14 +24,14 @@ extension ChampionMainListEntity {
         let name: String
         let title: String
         let id: String
-        let roleGroup: [RoleGrop]
+        let roleGroup: [RoleGroup]
     }
 }
 
-// MARK: - RoleGrop
+// MARK: - RoleGroup
 
 extension ChampionMainEntity {
-    enum RoleGrop: String {
+    enum RoleGroup: String {
         case assassin = "암살자"
         case fighter = "전사"
         case mage = "마법사"

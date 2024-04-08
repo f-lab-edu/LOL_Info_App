@@ -66,12 +66,12 @@ extension ChampionMainFavoriteListLayoutProvider: CompositionalLayoutProvider {
 
     func getLayoutGroup() -> NSCollectionLayoutGroup {
         let item = getLayoutItem()
-        let grupSize = NSCollectionLayoutSize(
+        let groupSize = NSCollectionLayoutSize(
             widthDimension: .absolute(Metric.Group.size),
             heightDimension: .estimated(Metric.Group.size)
         )
         let group = NSCollectionLayoutGroup.horizontal(
-            layoutSize: grupSize,
+            layoutSize: groupSize,
             subitems: [item]
         )
         return group

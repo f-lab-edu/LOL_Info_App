@@ -8,16 +8,17 @@
 import Combine
 import Foundation
 
+import Alamofire
+
 // MARK: - Dependency
 
 protocol ChampionMainUseCaseDependency {
     func getChampionMainListViewModels() -> AnyPublisher<[ChampionMainListViewModel], Error>
 }
 
-//MARK: - UseCase
+// MARK: - UseCase
 
 struct ChampionMainUseCase: ChampionMainUseCaseDependency {
-
     private let repository: ChampionMainRepositoryDependency
 
     init(repository: ChampionMainRepositoryDependency = ChampionMainRepository()) {
@@ -30,16 +31,17 @@ struct ChampionMainUseCase: ChampionMainUseCaseDependency {
 extension ChampionMainUseCase {
     func getChampionMainListViewModels() -> AnyPublisher<[ChampionMainListViewModel], Error> {
         return repository.requestAllChampionList()
-            .map { sortByChampionName(model: $0) }
+            .map { sortChampionListByName(model: $0) }
             .map { $0.map { ChampionMainListViewModel(entity: $0) } }
             .eraseToAnyPublisher()
     }
 }
 
-// MARK: - Helper Function
+// MARK: - Business Logic Function
 
 extension ChampionMainUseCase {
-    private func sortByChampionName(model: ChampionMainListEntity) -> [ChampionMainEntity] {
+    /// 챔피언 리스트를 '가나다' 순으로 정렬하는 함수입니다.
+    private func sortChampionListByName(model: ChampionMainListEntity) -> [ChampionMainEntity] {
         model.championList
             .sorted { $0.name < $1.name }
     }

@@ -8,19 +8,19 @@
 import Foundation
 
 struct ChampionMainListViewModel {
-    let nameAndTtitleLabelText: String
+    let nameAndTitleLabelText: String
     let roleLabelText: String
     let imageURLString: String
 
     init(entity: ChampionMainListEntity.ChampionMainEntity) {
-        nameAndTtitleLabelText = "\(entity.name) • \(entity.title)"
+        nameAndTitleLabelText = "\(entity.name) • \(entity.title)"
 
         roleLabelText = entity.roleGroup
             .map { $0.rawValue }
             .joined(separator: "\(StringConstants.comma) ")
 
         let url = Bundle.getURLString(key: .squareImageURL)
-        let fileName = FileNameConstants.png
-        imageURLString = url  + "\(entity.id)" + fileName
+        let fileExtend = FileExtendsConstants.png
+        imageURLString = "\(url)\(entity.id)\(fileExtend)"
     }
 }

@@ -12,7 +12,6 @@
 		F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
-		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
 		F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */; };
 		F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */; };
 		F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */; };
@@ -31,7 +30,7 @@
 		FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */; };
 		FE58236E2B9DC1930085E41E /* ChampionMainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236D2B9DC1930085E41E /* ChampionMainUseCase.swift */; };
 		FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */; };
-		FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823712B9DC35B0085E41E /* FileNameConstants.swift */; };
+		FE5823722B9DC35B0085E41E /* FileExtendsConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823712B9DC35B0085E41E /* FileExtendsConstants.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 /* End PBXBuildFile section */
 
@@ -65,7 +64,7 @@
 		FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionMainRepository.swift; sourceTree = "<group>"; };
 		FE58236D2B9DC1930085E41E /* ChampionMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainUseCase.swift; sourceTree = "<group>"; };
 		FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChampionMainListViewModel.swift; path = LOLInfoApp/Scenes/Champion/Main/DomainLayer/ChampionMainListViewModel.swift; sourceTree = SOURCE_ROOT; };
-		FE5823712B9DC35B0085E41E /* FileNameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNameConstants.swift; sourceTree = "<group>"; };
+		FE5823712B9DC35B0085E41E /* FileExtendsConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExtendsConstants.swift; sourceTree = "<group>"; };
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,9 +127,9 @@
 		F207C9822B8EA768009CE6CB /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				FE5823622B8B8C220085E41E /* StringConstants.swift */,
 				F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */,
-				FE5823712B9DC35B0085E41E /* FileNameConstants.swift */,
+				FE5823622B8B8C220085E41E /* StringConstants.swift */,
+				FE5823712B9DC35B0085E41E /* FileExtendsConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -184,6 +183,7 @@
 			children = (
 				FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */,
 				F2BE13522B7DD3E10029E980 /* OSLog.swift */,
+				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 		FE26A4092B711C0500CF2666 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
 				FE5823672B8B9D8E0085E41E /* DomainLayer */,
 				FEA540152B836E9000AB6FA2 /* DataLayer */,
-				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -316,14 +316,6 @@
 				F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */,
 			);
 			path = DataLayer;
-			sourceTree = "<group>";
-		};
-		FEA540162B836EA200AB6FA2 /* PresentationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
-			);
-			path = PresentationLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +441,7 @@
 				FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */,
 				FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
-				FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */,
+				FE5823722B9DC35B0085E41E /* FileExtendsConstants.swift in Sources */,
 				F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */,
 				F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
