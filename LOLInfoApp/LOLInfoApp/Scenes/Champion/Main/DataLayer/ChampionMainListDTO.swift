@@ -54,7 +54,7 @@ extension ChampionMainDTO {
         case support = "Support"
         case tank = "Tank"
 
-        func toEntity() -> ChampionMainEntity.RoleGrop {
+        func toEntity() -> ChampionMainEntity.RoleGroup {
             switch self {
             case .assassin:
                 return .assassin

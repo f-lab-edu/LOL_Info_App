@@ -5,17 +5,15 @@
 //  Created by Jeong Deokho on 2024/02/28.
 //
 
-import Foundation
-
-// MARK: - Type
+// MARK: - File Type
 
 enum BundleFileType {
-    static let plist: String = "plist"
+    static let plist = "plist"
 }
 
-// MARK: - Resource
+// MARK: - File Resource
 
 enum BundleResource {
-    static let url: String = "URL"
-    static let championPath: String = "ChampionPath"
+    static let url = "URL"
+    static let championPath = "ChampionPath"
 }

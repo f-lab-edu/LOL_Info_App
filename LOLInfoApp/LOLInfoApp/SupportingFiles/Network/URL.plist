@@ -4,5 +4,7 @@
 <dict>
 	<key>baseURL</key>
 	<string>https://ddragon.leagueoflegends.com/cdn/14.2.1</string>
+	<key>squareImageURL</key>
+	<string>https://ddragon.leagueoflegends.com/cdn/14.3.1/img/champion/</string>
 </dict>
 </plist>

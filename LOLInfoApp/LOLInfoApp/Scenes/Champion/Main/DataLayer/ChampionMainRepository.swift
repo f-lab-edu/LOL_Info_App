@@ -13,7 +13,6 @@ import Alamofire
 // MARK: - EndPoint
 
 struct ChampionMainRepository: Requestable {
-
     var path: String {
         return Bundle.getChampionPathString(key: .main)
     }
