@@ -1,0 +1,35 @@
+name: Pull Request Notification
+
+on:
+  pull_request:
+    types: [opened, reopened]
+
+jobs:
+  notify_slack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Slack on PR Opened
+        if: github.event.action == 'opened'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          text: |
+            PR 요청했습니다. 코드 리뷰 부탁드리겠습니다! 감사합니다!! 🙇🙇🙇
+            요청자: ${{ github.event.pull_request.user.login }}
+            브렌치 이름: "${{ github.event.pull_request.head.ref }}"
+            링크: "${{ github.event.pull_request.html_url }}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+
+      - name: Notify Slack on PR Reopened
+        if: github.event.action == 'reopened'
+        uses: 8398a7/action-slack@v3
+        with:
+          status: ${{ job.status }}
+          text: |
+            코드 리뷰 피드백 반영 했습니다! 🙇🙇🙇
+            요청자: ${{ github.event.pull_request.user.login }}
+            브렌치 이름: "${{ github.event.pull_request.head.ref }}"
+            링크: "${{ github.event.pull_request.html_url }}"
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}

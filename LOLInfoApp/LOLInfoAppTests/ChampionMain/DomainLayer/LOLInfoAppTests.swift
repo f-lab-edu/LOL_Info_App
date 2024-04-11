@@ -5,8 +5,6 @@
 //  Created by 정덕호 on 2024/03/10.
 //
 
-import XCTest
-
 import Combine
 import XCTest
 
@@ -36,11 +34,11 @@ final class ChampionMainUseCaseTests: XCTestCase {
     }
 
     func test_getChampionMainListViewModels가ViewModels를_제대로_반환하는지() {
-        //given
+        // given
         let expectation = expectation(description: "getChampionMainListViewModels ViewModels")
         var result: [ChampionMainListViewModel]?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { _ in
             } receiveValue: { viewModels in
@@ -49,7 +47,7 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: networkRequestTimeout)
         XCTAssertNotNil(result)
         XCTAssertFalse(result?.isEmpty ?? true)
@@ -63,11 +61,11 @@ final class ChampionMainUseCaseTests: XCTestCase {
     }
 
     func test_sortByChampionName이_이름을_가나다_순으로_잘_정렬하는지() {
-        //given
+        // given
         let expectation = expectation(description: "sortByChampionName")
         var result: [ChampionMainListViewModel]?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { _ in
             } receiveValue: { viewModels in
@@ -76,7 +74,7 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: networkRequestTimeout)
         XCTAssertEqual(result?[0].nameAndTtitleLabelText ?? "", "가렌 • 데마시아의 힘")
         XCTAssertEqual(result?[1].nameAndTtitleLabelText ?? "", "아리 • 구미호")
@@ -85,12 +83,12 @@ final class ChampionMainUseCaseTests: XCTestCase {
     }
 
     func test_getChampionMainListViewModels가_에러를_제대로_반환하는지() {
-        //given
+        // given
         mockRepository.errorToReturn = MockError.mockError
         let expectation = expectation(description: "getChampionMainListViewModels")
         var result: MockError?
 
-        //when
+        // when
         useCase.getChampionMainListViewModels()
             .sink { completion in
                 if case let .failure(error) = completion {
@@ -101,7 +99,7 @@ final class ChampionMainUseCaseTests: XCTestCase {
             }
             .store(in: &cancellables)
 
-        //then
+        // then
         wait(for: [expectation], timeout: networkRequestTimeout)
         XCTAssertNotNil(result)
         XCTAssertEqual(result, MockError.mockError)

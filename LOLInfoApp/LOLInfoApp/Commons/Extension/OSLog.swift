@@ -32,20 +32,19 @@ extension Log {
         _ arguments: [Any],
         level: Level,
         file: String,
-        function: String,
         line: Int
     ) {
         #if DEBUG
         var logMessage = getLogMessage(message,
                                        arguments)
         logMessage.insert(
-            contentsOf: getLogMessage(level: level, file: file, function: function, line: line),
+            contentsOf: getLogMessage(level: level, file: file, line: line),
             at: logMessage.startIndex
         )
         handleLoggingForLevel(logMessage: logMessage, level: level)
         #endif
     }
-    
+
     static private func getLogMessage(_ message: Any, _ arguments: [Any]) -> String {
         let argumentsMessage = arguments
             .map { String(describing: $0) }
@@ -54,21 +53,19 @@ extension Log {
         let extraMessage = "Arguments: \(StringConstants.lineBreak)\(argumentsMessage)"
         return mainMessage + extraMessage
     }
-    
+
     static private func getLogMessage(
         level: Level,
         file: String,
-        function: String,
         line: Int
     ) -> String {
         guard level != .network else { return "" }
         let fileName = file.split(separator: StringConstants.separator).last ?? ""
         let fileMessage = "\(StringConstants.lineBreak)File: \(fileName)"
-        let functionMessage = "\(StringConstants.lineBreak)Function: \(function)"
         let lineMessage = "\(StringConstants.lineBreak)Line: \(line)"
-        return fileMessage + functionMessage + lineMessage
+        return fileMessage + lineMessage
     }
-    
+
     static private func handleLoggingForLevel(logMessage: String, level: Level) {
         let logger = Logger(subsystem: OSLog.subsystem, category: level.rawValue)
         switch level {
@@ -89,29 +86,26 @@ extension Log {
         _ message: Any,
         _ arguments: Any...,
         file: String = #file,
-        function: String = #function,
         line: Int = #line
     ) {
-        log(message, arguments, level: .debug, file: file, function: function, line: line)
+        log(message, arguments, level: .debug, file: file, line: line)
     }
-    
+
     static func network(
         _ message: Any,
         _ arguments: Any...,
         file: String = #file,
-        function: String = #function,
         line: Int = #line
     ) {
-        log(message, arguments, level: .network, file: file, function: function, line: line)
+        log(message, arguments, level: .network, file: file, line: line)
     }
-    
+
     static func error(
         _ message: Any,
         _ arguments: Any...,
         file: String = #file,
-        function: String = #function,
         line: Int = #line
     ) {
-        log(message, arguments, level: .error, file: file, function: function, line: line)
+        log(message, arguments, level: .error, file: file, line: line)
     }
 }
