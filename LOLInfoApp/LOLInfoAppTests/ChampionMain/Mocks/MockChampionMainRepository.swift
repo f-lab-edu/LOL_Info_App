@@ -13,22 +13,24 @@ import Foundation
 // MARK: - Properties
 
 final class MockChampionMainRepository: ChampionMainRepositoryDependency {
+    var errorToReturn: MockError?
+    var mockEntity: ChampionMainListEntity
 
-    var shouldReturnError = false
-    var mockEntity: ChampionMainListEntity!
-
+    init(mockEntity: ChampionMainListEntity) {
+        self.mockEntity = mockEntity
+    }
 }
 
 // MARK: - Request Function
 
 extension MockChampionMainRepository {
     func requestAllChampionList() -> AnyPublisher<LOLInfoApp.ChampionMainListEntity, Error> {
-        guard shouldReturnError == false else {
-            return Fail(error: MockError.mockError)
+        guard let errorToReturn else {
+            return Just(mockEntity)
+                .setFailureType(to: Error.self)
                 .eraseToAnyPublisher()
         }
-        return Just(mockEntity)
-            .setFailureType(to: Error.self)
+        return Fail(error: errorToReturn)
             .eraseToAnyPublisher()
     }
 }
