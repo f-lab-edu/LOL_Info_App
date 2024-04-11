@@ -12,7 +12,6 @@
 		F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
-		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
 		F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */; };
 		F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */; };
 		F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */; };
@@ -29,8 +28,25 @@
 		FE5823652B8B91C50085E41E /* ChampionPath.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5823642B8B91C50085E41E /* ChampionPath.plist */; };
 		FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823682B8B9D8E0085E41E /* ChampionMainListEntity.swift */; };
 		FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */; };
+		FE58236E2B9DC1930085E41E /* ChampionMainUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236D2B9DC1930085E41E /* ChampionMainUseCase.swift */; };
+		FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */; };
+		FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823712B9DC35B0085E41E /* FileNameConstants.swift */; };
+		FE58237A2B9DD0180085E41E /* LOLInfoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823792B9DD0170085E41E /* LOLInfoAppTests.swift */; };
+		FE5823862B9DD0CF0085E41E /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823852B9DD0CF0085E41E /* MockError.swift */; };
+		FE5823892B9DD1030085E41E /* MockChampionMainRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5823882B9DD1030085E41E /* MockChampionMainRepository.swift */; };
+		FE58238B2B9DD1580085E41E /* MockChampionMainListEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */; };
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FE58237B2B9DD0180085E41E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE26A3E12B710ED500CF2666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE26A3E82B710ED500CF2666;
+			remoteInfo = LOLInfoApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		148E373A8A2129BF7F8C949F /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,12 +76,27 @@
 		FE5823642B8B91C50085E41E /* ChampionPath.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = ChampionPath.plist; sourceTree = "<group>"; };
 		FE5823682B8B9D8E0085E41E /* ChampionMainListEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionMainListEntity.swift; sourceTree = "<group>"; };
 		FE58236A2B8B9D9B0085E41E /* ChampionMainRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChampionMainRepository.swift; sourceTree = "<group>"; };
+		FE58236D2B9DC1930085E41E /* ChampionMainUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainUseCase.swift; sourceTree = "<group>"; };
+		FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChampionMainListViewModel.swift; path = LOLInfoApp/Scenes/Champion/Main/DomainLayer/ChampionMainListViewModel.swift; sourceTree = SOURCE_ROOT; };
+		FE5823712B9DC35B0085E41E /* FileNameConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileNameConstants.swift; sourceTree = "<group>"; };
+		FE5823772B9DD0170085E41E /* LOLInfoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LOLInfoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE5823792B9DD0170085E41E /* LOLInfoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOLInfoAppTests.swift; sourceTree = "<group>"; };
+		FE5823852B9DD0CF0085E41E /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
+		FE5823882B9DD1030085E41E /* MockChampionMainRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChampionMainRepository.swift; sourceTree = "<group>"; };
+		FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockChampionMainListEntity.swift; sourceTree = "<group>"; };
 		FEA540192B864D7800AB6FA2 /* URL.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = URL.plist; sourceTree = "<group>"; };
 		FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FE26A3E62B710ED500CF2666 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5823742B9DD0170085E41E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,6 +155,7 @@
 			children = (
 				FE5823622B8B8C220085E41E /* StringConstants.swift */,
 				F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */,
+				FE5823712B9DC35B0085E41E /* FileNameConstants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -177,6 +209,7 @@
 			children = (
 				FEA5401B2B864E9C00AB6FA2 /* Bundle.swift */,
 				F2BE13522B7DD3E10029E980 /* OSLog.swift */,
+				FE58236F2B9DC2310085E41E /* ChampionMainListViewModel.swift */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -185,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3EB2B710ED500CF2666 /* LOLInfoApp */,
+				FE5823782B9DD0170085E41E /* LOLInfoAppTests */,
 				FE26A3EA2B710ED500CF2666 /* Products */,
 				1836AE3F7B044CD5AFE9C5B1 /* Pods */,
 				256D0F82EF42589CCD24D097 /* Frameworks */,
@@ -196,6 +230,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */,
+				FE5823772B9DD0170085E41E /* LOLInfoAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -296,9 +331,53 @@
 		FE5823672B8B9D8E0085E41E /* DomainLayer */ = {
 			isa = PBXGroup;
 			children = (
+				FE58236D2B9DC1930085E41E /* ChampionMainUseCase.swift */,
 				FE5823682B8B9D8E0085E41E /* ChampionMainListEntity.swift */,
 			);
 			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		FE5823782B9DD0170085E41E /* LOLInfoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				FE5823842B9DD0BD0085E41E /* Common */,
+				FE5823872B9DD0E10085E41E /* ChampionMain */,
+			);
+			path = LOLInfoAppTests;
+			sourceTree = "<group>";
+		};
+		FE5823822B9DD09F0085E41E /* DomainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				FE5823792B9DD0170085E41E /* LOLInfoAppTests.swift */,
+			);
+			path = DomainLayer;
+			sourceTree = "<group>";
+		};
+		FE5823832B9DD0A90085E41E /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				FE5823882B9DD1030085E41E /* MockChampionMainRepository.swift */,
+				FE58238A2B9DD1580085E41E /* MockChampionMainListEntity.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		FE5823842B9DD0BD0085E41E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FE5823852B9DD0CF0085E41E /* MockError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FE5823872B9DD0E10085E41E /* ChampionMain */ = {
+			isa = PBXGroup;
+			children = (
+				FE5823832B9DD0A90085E41E /* Mocks */,
+				FE5823822B9DD09F0085E41E /* DomainLayer */,
+			);
+			path = ChampionMain;
 			sourceTree = "<group>";
 		};
 		FEA540152B836E9000AB6FA2 /* DataLayer */ = {
@@ -332,6 +411,24 @@
 			productReference = FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FE5823762B9DD0170085E41E /* LOLInfoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FE58237F2B9DD0180085E41E /* Build configuration list for PBXNativeTarget "LOLInfoAppTests" */;
+			buildPhases = (
+				FE5823732B9DD0170085E41E /* Sources */,
+				FE5823742B9DD0170085E41E /* Frameworks */,
+				FE5823752B9DD0170085E41E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FE58237C2B9DD0180085E41E /* PBXTargetDependency */,
+			);
+			name = LOLInfoAppTests;
+			productName = LOLInfoAppTests;
+			productReference = FE5823772B9DD0170085E41E /* LOLInfoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -344,6 +441,10 @@
 				TargetAttributes = {
 					FE26A3E82B710ED500CF2666 = {
 						CreatedOnToolsVersion = 14.0.1;
+					};
+					FE5823762B9DD0170085E41E = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = FE26A3E82B710ED500CF2666;
 					};
 				};
 			};
@@ -361,6 +462,7 @@
 			projectRoot = "";
 			targets = (
 				FE26A3E82B710ED500CF2666 /* LOLInfoApp */,
+				FE5823762B9DD0170085E41E /* LOLInfoAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -374,6 +476,13 @@
 				FE26A3F62B710ED600CF2666 /* Assets.xcassets in Resources */,
 				FE5823652B8B91C50085E41E /* ChampionPath.plist in Resources */,
 				FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE5823752B9DD0170085E41E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,16 +536,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
+				FE5823702B9DC2310085E41E /* ChampionMainListViewModel.swift in Sources */,
 				F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */,
 				FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */,
 				FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */,
 				FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
+				FE5823722B9DC35B0085E41E /* FileNameConstants.swift in Sources */,
 				F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */,
 				F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
 				F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
+				FE58236E2B9DC1930085E41E /* ChampionMainUseCase.swift in Sources */,
 				FE26A3EF2B710ED500CF2666 /* SceneDelegate.swift in Sources */,
 				F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */,
 				F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */,
@@ -447,7 +559,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FE5823732B9DD0170085E41E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FE58238B2B9DD1580085E41E /* MockChampionMainListEntity.swift in Sources */,
+				FE5823892B9DD1030085E41E /* MockChampionMainRepository.swift in Sources */,
+				FE5823862B9DD0CF0085E41E /* MockError.swift in Sources */,
+				FE58237A2B9DD0180085E41E /* LOLInfoAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FE58237C2B9DD0180085E41E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE26A3E82B710ED500CF2666 /* LOLInfoApp */;
+			targetProxy = FE58237B2B9DD0180085E41E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */ = {
@@ -631,6 +762,50 @@
 			};
 			name = Release;
 		};
+		FE58237D2B9DD0180085E41E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3L2WN7T88;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLInfoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LOLInfoApp";
+			};
+			name = Debug;
+		};
+		FE58237E2B9DD0180085E41E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L3L2WN7T88;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLInfoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LOLInfoApp";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -648,6 +823,15 @@
 			buildConfigurations = (
 				FE26A3FE2B710ED600CF2666 /* Debug */,
 				FE26A3FF2B710ED600CF2666 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FE58237F2B9DD0180085E41E /* Build configuration list for PBXNativeTarget "LOLInfoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FE58237D2B9DD0180085E41E /* Debug */,
+				FE58237E2B9DD0180085E41E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -12,9 +12,9 @@ struct ChampionMainCollectionViewLayoutFactory {
 
     func createLayout(sectionType: SectionType) -> NSCollectionLayoutSection {
         if sectionType == .mainList {
-            ChampionMainListLayoutProvider().getLayoutSection()
+            return ChampionMainListLayoutProvider().getLayoutSection()
         } else {
-            ChampionMainFavoriteListLayoutProvider().getLayoutSection()
+            return ChampionMainFavoriteListLayoutProvider().getLayoutSection()
         }
     }
 }
