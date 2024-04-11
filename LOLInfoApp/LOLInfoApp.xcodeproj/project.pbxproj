@@ -12,12 +12,19 @@
 		F22715922BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */; };
 		F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */; };
 		F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */; };
-		F2BE13532B7DD3E10029E980 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13522B7DD3E10029E980 /* OSLog.swift */; };
+		F2773FC92BC3A6EC00630E07 /* AppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FC82BC3A6EC00630E07 /* AppleSignInManager.swift */; };
+		F2773FCC2BC3B4E900630E07 /* AppleUserEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FCB2BC3B4E900630E07 /* AppleUserEntity.swift */; };
+		F2773FCE2BC3B9B100630E07 /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FCD2BC3B9B100630E07 /* AppleSignInError.swift */; };
+		F2773FD02BC4BDB800630E07 /* AppleSignInManagerDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FCF2BC4BDB800630E07 /* AppleSignInManagerDependency.swift */; };
+		F2773FDF2BC4CCF600630E07 /* AppleSignInTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FDE2BC4CCF600630E07 /* AppleSignInTest.swift */; };
+		F2773FE92BC4CE1900630E07 /* MockAppleSignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FE82BC4CE1900630E07 /* MockAppleSignInManager.swift */; };
+		F2773FEB2BC4D0C600630E07 /* MockCredential.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2773FEA2BC4D0C600630E07 /* MockCredential.swift */; };
 		F28816BB2B8EF36000BD0B93 /* ChampionMainCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */; };
 		F2A002562B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */; };
 		F2A002582B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */; };
 		F2A0025B2B9AD04400B69D10 /* CompositionalLayoutProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2A0025A2B9AD04400B69D10 /* CompositionalLayoutProvider.swift */; };
 		F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2BE13542B7DDD9D0029E980 /* Requestable.swift */; };
+		F2C4B24A2BC7C779003122F7 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2C4B2492BC7C779003122F7 /* MockError.swift */; };
 		F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2F9932B9ADA89009812C3 /* Bundle.swift */; };
 		F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D2F9952B9ADA8D009812C3 /* OSLog.swift */; };
 		FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE26A3EC2B710ED500CF2666 /* AppDelegate.swift */; };
@@ -32,6 +39,16 @@
 		FEA5401A2B864D7800AB6FA2 /* URL.plist in Resources */ = {isa = PBXBuildFile; fileRef = FEA540192B864D7800AB6FA2 /* URL.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F2773FE02BC4CCF600630E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE26A3E12B710ED500CF2666 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE26A3E82B710ED500CF2666;
+			remoteInfo = LOLInfoApp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		148E373A8A2129BF7F8C949F /* Pods-LOLInfoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.release.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.release.xcconfig"; sourceTree = "<group>"; };
 		4FF80F409D2A5751A884C20E /* Pods-LOLInfoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LOLInfoApp.debug.xcconfig"; path = "Target Support Files/Pods-LOLInfoApp/Pods-LOLInfoApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -41,12 +58,22 @@
 		F22715912BB6A80E00B498FB /* ChampionMainCollectionViewScetionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionViewScetionType.swift; sourceTree = "<group>"; };
 		F237D89C2B8EB05E00232F34 /* Bundle+Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Constants.swift"; sourceTree = "<group>"; };
 		F272E2522B7E0CAE00F05B31 /* ChampionMainListDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListDTO.swift; sourceTree = "<group>"; };
+		F2773FC72BC38E9F00630E07 /* LOLInfoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LOLInfoApp.entitlements; sourceTree = "<group>"; };
+		F2773FC82BC3A6EC00630E07 /* AppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppleSignInManager.swift; path = LOLInfoApp/Manager/AppleSignIn/AppleSignInManager.swift; sourceTree = SOURCE_ROOT; };
+		F2773FCB2BC3B4E900630E07 /* AppleUserEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleUserEntity.swift; sourceTree = "<group>"; };
+		F2773FCD2BC3B9B100630E07 /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
+		F2773FCF2BC4BDB800630E07 /* AppleSignInManagerDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInManagerDependency.swift; sourceTree = "<group>"; };
+		F2773FDC2BC4CCF600630E07 /* AppleSignInTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppleSignInTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2773FDE2BC4CCF600630E07 /* AppleSignInTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInTest.swift; sourceTree = "<group>"; };
+		F2773FE82BC4CE1900630E07 /* MockAppleSignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAppleSignInManager.swift; sourceTree = "<group>"; };
+		F2773FEA2BC4D0C600630E07 /* MockCredential.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCredential.swift; sourceTree = "<group>"; };
 		F28816BA2B8EF36000BD0B93 /* ChampionMainCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainCollectionView.swift; sourceTree = "<group>"; };
 		F2A002552B9ACBE700B69D10 /* ChampionMainFavoriteListLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainFavoriteListLayoutProvider.swift; sourceTree = "<group>"; };
 		F2A002572B9ACC3C00B69D10 /* ChampionMainListLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChampionMainListLayoutProvider.swift; sourceTree = "<group>"; };
 		F2A0025A2B9AD04400B69D10 /* CompositionalLayoutProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositionalLayoutProvider.swift; sourceTree = "<group>"; };
 		F2BE13522B7DD3E10029E980 /* OSLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		F2BE13542B7DDD9D0029E980 /* Requestable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
+		F2C4B2492BC7C779003122F7 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		F2D2F9932B9ADA89009812C3 /* Bundle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		F2D2F9952B9ADA8D009812C3 /* OSLog.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSLog.swift; sourceTree = "<group>"; };
 		FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LOLInfoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +92,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F2773FD92BC4CCF600630E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE26A3E62B710ED500CF2666 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -136,6 +170,36 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		F2773FCA2BC3B4CF00630E07 /* AppleSignIn */ = {
+			isa = PBXGroup;
+			children = (
+				F2773FCF2BC4BDB800630E07 /* AppleSignInManagerDependency.swift */,
+				F2773FC82BC3A6EC00630E07 /* AppleSignInManager.swift */,
+				F2773FCB2BC3B4E900630E07 /* AppleUserEntity.swift */,
+				F2773FCD2BC3B9B100630E07 /* AppleSignInError.swift */,
+			);
+			path = AppleSignIn;
+			sourceTree = "<group>";
+		};
+		F2773FDD2BC4CCF600630E07 /* AppleSignInTest */ = {
+			isa = PBXGroup;
+			children = (
+				F2773FE52BC4CD0F00630E07 /* Mocks */,
+				F2773FDE2BC4CCF600630E07 /* AppleSignInTest.swift */,
+			);
+			path = AppleSignInTest;
+			sourceTree = "<group>";
+		};
+		F2773FE52BC4CD0F00630E07 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				F2C4B2492BC7C779003122F7 /* MockError.swift */,
+				F2773FEA2BC4D0C600630E07 /* MockCredential.swift */,
+				F2773FE82BC4CE1900630E07 /* MockAppleSignInManager.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
 		F28816B92B8EF1E900BD0B93 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
@@ -185,6 +249,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3EB2B710ED500CF2666 /* LOLInfoApp */,
+				F2773FDD2BC4CCF600630E07 /* AppleSignInTest */,
 				FE26A3EA2B710ED500CF2666 /* Products */,
 				1836AE3F7B044CD5AFE9C5B1 /* Pods */,
 				256D0F82EF42589CCD24D097 /* Frameworks */,
@@ -196,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				FE26A3E92B710ED500CF2666 /* LOLInfoApp.app */,
+				F2773FDC2BC4CCF600630E07 /* AppleSignInTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +269,7 @@
 		FE26A3EB2B710ED500CF2666 /* LOLInfoApp */ = {
 			isa = PBXGroup;
 			children = (
+				F2773FC72BC38E9F00630E07 /* LOLInfoApp.entitlements */,
 				FE26A4042B711B3F00CF2666 /* Application */,
 				FE26A4072B711B6500CF2666 /* SupportingFiles */,
 				FE26A4062B711B5900CF2666 /* Resources */,
@@ -259,9 +326,9 @@
 		FE26A4092B711C0500CF2666 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
 				FE5823672B8B9D8E0085E41E /* DomainLayer */,
 				FEA540152B836E9000AB6FA2 /* DataLayer */,
-				F207C97D2B8DB6DB009CE6CB /* PresentationLayer */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -269,6 +336,7 @@
 		FE26A40B2B711CA600CF2666 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				F2773FCA2BC3B4CF00630E07 /* AppleSignIn */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -313,6 +381,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F2773FDB2BC4CCF600630E07 /* AppleSignInTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2773FE22BC4CCF600630E07 /* Build configuration list for PBXNativeTarget "AppleSignInTest" */;
+			buildPhases = (
+				F2773FD82BC4CCF600630E07 /* Sources */,
+				F2773FD92BC4CCF600630E07 /* Frameworks */,
+				F2773FDA2BC4CCF600630E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F2773FE12BC4CCF600630E07 /* PBXTargetDependency */,
+			);
+			name = AppleSignInTest;
+			productName = AppleSignInTest;
+			productReference = F2773FDC2BC4CCF600630E07 /* AppleSignInTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FE26A3E82B710ED500CF2666 /* LOLInfoApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE26A3FD2B710ED600CF2666 /* Build configuration list for PBXNativeTarget "LOLInfoApp" */;
@@ -339,9 +425,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
+					F2773FDB2BC4CCF600630E07 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = FE26A3E82B710ED500CF2666;
+					};
 					FE26A3E82B710ED500CF2666 = {
 						CreatedOnToolsVersion = 14.0.1;
 					};
@@ -361,11 +451,19 @@
 			projectRoot = "";
 			targets = (
 				FE26A3E82B710ED500CF2666 /* LOLInfoApp */,
+				F2773FDB2BC4CCF600630E07 /* AppleSignInTest */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		F2773FDA2BC4CCF600630E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE26A3E72B710ED500CF2666 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,18 +520,33 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F2773FD82BC4CCF600630E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2773FE92BC4CE1900630E07 /* MockAppleSignInManager.swift in Sources */,
+				F2773FDF2BC4CCF600630E07 /* AppleSignInTest.swift in Sources */,
+				F2C4B24A2BC7C779003122F7 /* MockError.swift in Sources */,
+				F2773FEB2BC4D0C600630E07 /* MockCredential.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FE26A3E52B710ED500CF2666 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2773FC92BC3A6EC00630E07 /* AppleSignInManager.swift in Sources */,
 				F2BE13552B7DDD9D0029E980 /* Requestable.swift in Sources */,
 				F2D2F9942B9ADA89009812C3 /* Bundle.swift in Sources */,
+				F2773FD02BC4BDB800630E07 /* AppleSignInManagerDependency.swift in Sources */,
 				FE58236B2B8B9D9B0085E41E /* ChampionMainRepository.swift in Sources */,
+				F2773FCC2BC3B4E900630E07 /* AppleUserEntity.swift in Sources */,
 				FE5823692B8B9D8E0085E41E /* ChampionMainListEntity.swift in Sources */,
 				FE5823632B8B8C220085E41E /* StringConstants.swift in Sources */,
 				F272E2532B7E0CAE00F05B31 /* ChampionMainListDTO.swift in Sources */,
 				F2D2F9962B9ADA8E009812C3 /* OSLog.swift in Sources */,
 				F237D89D2B8EB05E00232F34 /* Bundle+Constants.swift in Sources */,
+				F2773FCE2BC3B9B100630E07 /* AppleSignInError.swift in Sources */,
 				FE26A3F12B710ED500CF2666 /* ChampionMainViewController.swift in Sources */,
 				F207C9812B8DB787009CE6CB /* UIColor.swift in Sources */,
 				FE26A3ED2B710ED500CF2666 /* AppDelegate.swift in Sources */,
@@ -449,6 +562,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		F2773FE12BC4CCF600630E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE26A3E82B710ED500CF2666 /* LOLInfoApp */;
+			targetProxy = F2773FE02BC4CCF600630E07 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		FE26A3F72B710ED600CF2666 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -461,6 +582,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		F2773FE32BC4CCF600630E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G42AKFB24M;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LoLInfoApp.AppleSignInTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLInfoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LOLInfoApp";
+			};
+			name = Debug;
+		};
+		F2773FE42BC4CCF600630E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = G42AKFB24M;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = LoLInfoApp.AppleSignInTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LOLInfoApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LOLInfoApp";
+			};
+			name = Release;
+		};
 		FE26A3FB2B710ED600CF2666 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -581,9 +749,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LOLInfoApp/LOLInfoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G42AKFB24M;
+				DEVELOPMENT_TEAM = V53Z7HF8ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -595,7 +764,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoAppssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -609,9 +778,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LOLInfoApp/LOLInfoApp.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = G42AKFB24M;
+				DEVELOPMENT_TEAM = V53Z7HF8ZQ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LOLInfoApp/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -623,7 +793,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.DeokHo98.LOLInfoAppssss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -634,6 +804,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F2773FE22BC4CCF600630E07 /* Build configuration list for PBXNativeTarget "AppleSignInTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2773FE32BC4CCF600630E07 /* Debug */,
+				F2773FE42BC4CCF600630E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		FE26A3E42B710ED500CF2666 /* Build configuration list for PBXProject "LOLInfoApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
